@@ -211,34 +211,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 </div>
 <!-- //welcome -->
 <!-- services -->
-<div class="services jarallax">
-    <div class="container">
-        <h3 class="agileits-title w3title1">Our Services</h3>
-        <div class="services-w3ls-row">
-            <div class="col-md-3 col-sm-3 col-xs-6 services-grid agileits-w3layouts">
-                <span class="glyphicon glyphicon-home effect-1" aria-hidden="true"></span>
-                <h5>Lorem ipsum</h5>
-                <p>Itaque earum rerum hic a sapiente delectus in auctor sapien.</p>
-            </div>
-            <div class="col-md-3 col-sm-3 col-xs-6 services-grid agileits-w3layouts">
-                <span class="glyphicon glyphicon-list-alt effect-1" aria-hidden="true"></span>
-                <h5>Ut non lacus</h5>
-                <p>Itaque earum rerum hic a sapiente delectus in auctor sapien.</p>
-            </div>
-            <div class="col-md-3 col-sm-3 col-xs-6 services-grid agileits-w3layouts">
-                <span class="glyphicon glyphicon-tree-deciduous effect-1" aria-hidden="true"></span>
-                <h5>Maec rutrum</h5>
-                <p>Itaque earum rerum hic a sapiente delectus in auctor sapien.</p>
-            </div>
-            <div class="col-md-3 col-sm-3 col-xs-6 services-grid">
-                <span class="glyphicon glyphicon-globe effect-1" aria-hidden="true"></span>
-                <h5>Phase gravida</h5>
-                <p>Itaque earum rerum hic a sapiente delectus in auctor sapien.</p>
-            </div>
-            <div class="clearfix"></div>
-        </div>
-    </div>
-</div>
+
 <!-- //services -->
 <!-- blog-bottom -->
 <div class="blog-bottom">
@@ -264,23 +237,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
     </div>
 </div>
 <!-- //blog-bottom -->
-<!-- news letter -->
-<div class="subscribe jarallax">
-    <div class="sub-agileinfo">
-        <div class="container">
-            <h3 class="agileits-title w3title1">Get our free newsletter</h3>
-            <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni
-                dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est consectetur adipisci velit
-                sed quia non numquam eius.</p>
-            <form>
-                <input type="email" name="email" placeholder="Email Address" class="user" required="">
-                <input type="submit" value="Subscribe">
-            </form>
-            <p class="spam">We never share your information or use it to spam you</p>
-        </div>
-    </div>
-</div>
-<!-- //news letter -->
+
 <!-- footer -->
 <div class="footer">
     <div class="footer-top">
@@ -328,12 +285,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
             </div>
         </div>
     </div>
-    <div class="footer-bottom">
-        <div class="container">
-            <p>© 2017 Best Pets. All rights reserved | Design by <a href="http://w3layouts.com">W3layouts</a></p>
-        </div>
-    </div>
-</div>
+    
 <!-- //footer -->
 <!-- modal-about -->
 <div class="modal bnr-modal fade" id="myModal" tabindex="-1" role="dialog">

@@ -192,21 +192,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 		</div>
 	</div>
 	<!-- //gallery -->  
-	<!-- news letter -->
-	<div class="subscribe jarallax">
-		<div class="sub-agileinfo">
-			<div class="container">
-				<h3 class="agileits-title w3title1">Get our free newsletter</h3>
-				<p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est consectetur adipisci velit sed quia non numquam eius.</p>
-				<form>
-					<input type="email" name="email" placeholder="Email Address" class="user" required="">
-					<input type="submit" value="Subscribe">
-				</form>
-				<p class="spam">We never share your information or use it to spam you</p>
-			</div> 
-		</div>
-	</div>
-	<!-- //news letter -->
+
 	<!-- footer -->
 	<div class="footer">
 		<div class="footer-top">
@@ -252,12 +238,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					<div class="clearfix"> </div>
 				</div>
 			</div>
-		</div>
-		<div class="footer-bottom">
-			<div class="container">
-				<p>© 2017 Best Pets. All rights reserved | Design by <a href="http://w3layouts.com">W3layouts</a></p>
-			</div>
-		</div>
+		
 	</div>
 	<!-- //footer -->
 	<!-- modal-about -->

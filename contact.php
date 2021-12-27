@@ -130,21 +130,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	<div class="map">
 		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d24174.906176932098!2d-73.98255489041246!3d40.765031876857535!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c258bf12dbe975%3A0xf6bac5dd7bc5f711!2sPookie+and+Sebastian!5e0!3m2!1sen!2sin!4v1482923320436"></iframe> 
 	</div> 
-	<!-- news letter -->
-	<div class="subscribe jarallax">
-		<div class="sub-agileinfo">
-			<div class="container">
-				<h3 class="agileits-title w3title1">Get our free newsletter</h3>
-				<p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est consectetur adipisci velit sed quia non numquam eius.</p>
-				<form>
-					<input type="email" name="email" placeholder="Email Address" class="user" required="">
-					<input type="submit" value="Subscribe">
-				</form>
-				<p class="spam">We never share your information or use it to spam you</p>
-			</div> 
-		</div>
-	</div>
-	<!-- //news letter -->
+	
 	<!-- footer -->
 	<div class="footer">
 		<div class="footer-top">
@@ -191,11 +177,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				</div>
 			</div>
 		</div>
-		<div class="footer-bottom">
-			<div class="container">
-				<p>© 2017 Best Pets. All rights reserved | Design by <a href="http://w3layouts.com">W3layouts</a></p>
-			</div>
-		</div>
+
 	</div>
 	<!-- //footer -->
 	<!-- modal-about -->
