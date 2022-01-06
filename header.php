@@ -59,14 +59,14 @@
                             <ul class="nav navbar-nav cl-effect-16">
                                 <li><a href="index.php" data-hover="Home">Home</a></li>
                                 <li><a href="about.php" data-hover="About">About</a></li>
-                                <li><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
-                                       aria-haspopup="true" aria-expanded="false">Pages <span class="caret"></span></a>
-                                    <ul class="dropdown-menu">
-                                        <li><a href="icons.php" data-hover="Web Icons">Web Icons</a></li>
-                                        <li><a href="codes.php" data-hover="Short Codes">Short Codes</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="gallery.php" data-hover="Gallery">Gallery</a></li>
+                                <!--                                <li><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"-->
+                                <!--                                       aria-haspopup="true" aria-expanded="false">Pages <span class="caret"></span></a>-->
+                                <!--                                    <ul class="dropdown-menu">-->
+                                <!--                                        <li><a href="icons.php" data-hover="Web Icons">Web Icons</a></li>-->
+                                <!--                                        <li><a href="codes.php" data-hover="Short Codes">Short Codes</a></li>-->
+                                <!--                                    </ul>-->
+                                <!--                                </li>-->
+                                <li><a href="gallery.php" data-hover="Gallery">E-Store</a></li>
                                 <li><a href="contact.php" data-hover="Contact">Contact</a></li>
                             </ul>
                             <div class="clearfix"></div>
@@ -122,7 +122,7 @@
                         <div class="resp-tabs-container">
                             <div class="tab-1 resp-tab-content" aria-labelledby="tab_item-0">
                                 <div class="agileits-login">
-                                    <form action="#" method="post">
+                                    <form action="auth/login_process.php" method="post">
                                         <input type="email" class="email" name="Email" placeholder="Email" required=""/>
                                         <input type="password" class="password" name="Password" placeholder="Password"
                                                required=""/>
@@ -147,8 +147,9 @@
                             <div class="tab-1 resp-tab-content" aria-labelledby="tab_item-1">
                                 <div class="login-top sign-top">
                                     <div class="agileits-login">
-                                        <form action="#" method="post">
+                                        <form action="auth/registration_process.php" method="post">
                                             <input type="text" name="name" placeholder="Full Name" required="">
+                                            <input type="text" name="phone" placeholder="Phone Number" required="">
                                             <input type="email" class="email" name="Email" placeholder="Email"
                                                    required=""/>
                                             <input type="password" class="password" name="Password"

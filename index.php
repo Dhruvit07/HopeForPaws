@@ -1,24 +1,17 @@
-<!--
-Author: W3layouts
-Author URL: http://w3layouts.com
-License: Creative Commons Attribution 3.0 Unported
-License URL: http://creativecommons.org/licenses/by/3.0/
--->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Best Pets an Animals and pets Category Bootstrap Responsive website Template | Home :: w3layouts</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <meta name="keywords" content="Best Pets Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template,
 	SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony Ericsson, Motorola web design"/>
     <script type="application/x-javascript"> addEventListener("load", function () {
-        setTimeout(hideURLbar, 0);
-    }, false);
+            setTimeout(hideURLbar, 0);
+        }, false);
 
-    function hideURLbar() {
-        window.scrollTo(0, 1);
-    } </script>
+        function hideURLbar() {
+            window.scrollTo(0, 1);
+        } </script>
     <!-- Custom Theme files -->
     <link href="css/bootstrap.css" type="text/css" rel="stylesheet" media="all">
     <link href="css/style.css" type="text/css" rel="stylesheet" media="all">
@@ -65,14 +58,14 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                             <ul class="nav navbar-nav cl-effect-16">
                                 <li><a href="index.php" class="active" data-hover="Home">Home</a></li>
                                 <li><a href="about.php" data-hover="About">About</a></li>
-                                <li><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
-                                       aria-haspopup="true" aria-expanded="false">Pages <span class="caret"></span></a>
-                                    <ul class="dropdown-menu">
-                                        <li><a href="icons.php" data-hover="Web Icons">Web Icons</a></li>
-                                        <li><a href="codes.php" data-hover="Short Codes">Short Codes</a></li>
-                                    </ul>
+                                <!--                                <li><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"-->
+                                <!--                                       aria-haspopup="true" aria-expanded="false">Pages <span class="caret"></span></a>-->
+                                <!--                                    <ul class="dropdown-menu">-->
+                                <!--                                        <li><a href="icons.php" data-hover="Web Icons">Web Icons</a></li>-->
+                                <!--                                        <li><a href="codes.php" data-hover="Short Codes">Short Codes</a></li>-->
+                                <!--                                    </ul>-->
                                 </li>
-                                <li><a href="gallery.php" data-hover="Gallery">Gallery</a></li>
+                                <li><a href="gallery.php" data-hover="Gallery">E-Store</a></li>
                                 <li><a href="contact.php" data-hover="Contact">Contact</a></li>
                             </ul>
                             <div class="clearfix"></div>
@@ -89,7 +82,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                     <div class="agile_banner_info1">
                         <h6>Quis nostrum exercitationem </h6>
                         <div id="typed-strings" class="agileits_w3layouts_strings">
-                            <p>Welcome to<i>    Hope For Paws</i></p>
+                            <p>Welcome to<i> Hope For Paws</i></p>
                             <p><i>Get You</i> Best Help</p>
                             <p>Buy A Gift For<i> Your Love</i></p>
                         </div>
@@ -98,12 +91,12 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                 </div>
                 <div class="agile_social_icons_banner">
                     <ul class="agileits_social_list">
-                        <li><a href="#" class="w3_agile_facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                        </li>
-                        <li><a href="#" class="agile_twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                        <li><a href="#" class="w3_agile_dribble"><i class="fa fa-dribbble" aria-hidden="true"></i></a>
-                        </li>
-                        <li><a href="#" class="w3_agile_vimeo"><i class="fa fa-vimeo" aria-hidden="true"></i></a></li>
+                        <!--                        <li><a href="#" class="w3_agile_facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a>-->
+                        <!--                        </li>-->
+                        <!--                        <li><a href="#" class="agile_twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>-->
+                        <!--                        <li><a href="#" class="w3_agile_dribble"><i class="fa fa-dribbble" aria-hidden="true"></i></a>-->
+                        <!--                        </li>-->
+                        <!--                        <li><a href="#" class="w3_agile_vimeo"><i class="fa fa-vimeo" aria-hidden="true"></i></a></li>-->
                     </ul>
                 </div>
             </div>
@@ -237,56 +230,9 @@ License URL: http://creativecommons.org/licenses/by/3.0/
     </div>
 </div>
 <!-- //blog-bottom -->
-
-<!-- footer -->
-<div class="footer">
-    <div class="footer-top">
-        <div class="container">
-            <div class="footer-grids">
-                <div class="col-md-3 col-sm-6 footer-logo">
-                    <div class="agileits-logo">
-                        <h2><a href="index.php">Best Pets</a></h2>
-                    </div>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eget egestas erat. In hac habitasse
-                        platea dictumst.</p>
-                </div>
-                <div class="col-md-3 col-sm-6 footer-grid">
-                    <h3>Navigation</h3>
-                    <ul>
-                        <li><a href="index.php">Home</a></li>
-                        <li><a href="about.php">About</a></li>
-                        <li><a href="gallery.php">Gallery</a></li>
-                        <li><a href="icons.php">Web Icons</a></li>
-                        <li><a href="codes.php">Short Codes</a></li>
-                        <li><a href="contact.php">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="col-md-3 col-sm-6 footer-list">
-                    <h3>Latest Posts</h3>
-                    <ul>
-                        <li><i class="fa fa-arrow-right" aria-hidden="true"></i> Vestibulum ante ipsum</li>
-                        <li><i class="fa fa-arrow-right" aria-hidden="true"></i> Phasellus at eros</li>
-                        <li><i class="fa fa-arrow-right" aria-hidden="true"></i> Mauris eleifend aliquet</li>
-                        <li><i class="fa fa-arrow-right" aria-hidden="true"></i> Aliquam vitae tristique</li>
-                        <li><i class="fa fa-arrow-right" aria-hidden="true"></i> Pellentesque lobortis</li>
-                        <li><i class="fa fa-arrow-right" aria-hidden="true"></i> Class aptent taciti</li>
-                    </ul>
-                </div>
-                <div class="col-md-3 col-sm-6 footer-grid">
-                    <h3>Twitter Posts</h3>
-                    <ul class="w3agile_footer_grid_list">
-                        <li>Ut aut reiciendis voluptatibus <a href="#">http://example.com</a> alias, ut aut.
-                            <span><i class="fa fa-twitter" aria-hidden="true"></i> 02 days ago</span></li>
-                        <li>Itaque earum rerum hic tenetur a sapiente <a href="#">http://example.com</a> ut aut.
-                            <span><i class="fa fa-twitter" aria-hidden="true"></i> 03 days ago</span></li>
-                    </ul>
-                </div>
-                <div class="clearfix"></div>
-            </div>
-        </div>
-    </div>
-    
-<!-- //footer -->
+<?php
+include 'footer.php';
+?>
 <!-- modal-about -->
 <div class="modal bnr-modal fade" id="myModal" tabindex="-1" role="dialog">
     <div class="modal-dialog" role="document">
@@ -331,7 +277,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                         <div class="resp-tabs-container">
                             <div class="tab-1 resp-tab-content" aria-labelledby="tab_item-0">
                                 <div class="agileits-login">
-                                    <form action="#" method="post">
+                                    <form action="auth/login_process.php" method="post">
                                         <input type="email" class="email" name="Email" placeholder="Email" required=""/>
                                         <input type="password" class="password" name="Password" placeholder="Password"
                                                required=""/>
@@ -356,8 +302,9 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                             <div class="tab-1 resp-tab-content" aria-labelledby="tab_item-1">
                                 <div class="login-top sign-top">
                                     <div class="agileits-login">
-                                        <form action="#" method="post">
-                                            <input type="text" name="Username" placeholder="Username" required="">
+                                        <form action="auth/registration_process.php" method="post">
+                                            <input type="text" name="name" placeholder="Full Name" required="">
+                                            <input type="text" name="phone" placeholder="Phone Number" required="">
                                             <input type="email" class="email" name="Email" placeholder="Email"
                                                    required=""/>
                                             <input type="password" class="password" name="Password"

@@ -1,13 +1,6 @@
-<!--
-Author: W3layouts
-Author URL: http://w3layouts.com
-License: Creative Commons Attribution 3.0 Unported
-License URL: http://creativecommons.org/licenses/by/3.0/
--->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Best Pets an Animals and pets Category Bootstrap Responsive website Template | Contact :: w3layouts</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <meta name="keywords" content="Best Pets Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template,
@@ -87,56 +80,9 @@ include 'header.php';
     </div>
 </div>
 <!-- //contact -->
-<!-- footer -->
-<div class="footer">
-    <div class="footer-top">
-        <div class="container">
-            <div class="footer-grids">
-                <div class="col-md-3 col-sm-6 footer-logo">
-                    <div class="agileits-logo">
-                        <h2><a href="index.php">Best Pets</a></h2>
-                    </div>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eget egestas erat. In hac habitasse
-                        platea dictumst.</p>
-                </div>
-                <div class="col-md-3 col-sm-6 footer-grid">
-                    <h3>Navigation</h3>
-                    <ul>
-                        <li><a href="index.php">Home</a></li>
-                        <li><a href="about.php">About</a></li>
-                        <li><a href="gallery.php">Gallery</a></li>
-                        <li><a href="icons.php">Web Icons</a></li>
-                        <li><a href="codes.php">Short Codes</a></li>
-                        <li><a href="contact.php">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="col-md-3 col-sm-6 footer-list">
-                    <h3>Latest Posts</h3>
-                    <ul>
-                        <li><i class="fa fa-arrow-right" aria-hidden="true"></i> Vestibulum ante ipsum</li>
-                        <li><i class="fa fa-arrow-right" aria-hidden="true"></i> Phasellus at eros</li>
-                        <li><i class="fa fa-arrow-right" aria-hidden="true"></i> Mauris eleifend aliquet</li>
-                        <li><i class="fa fa-arrow-right" aria-hidden="true"></i> Aliquam vitae tristique</li>
-                        <li><i class="fa fa-arrow-right" aria-hidden="true"></i> Pellentesque lobortis</li>
-                        <li><i class="fa fa-arrow-right" aria-hidden="true"></i> Class aptent taciti</li>
-                    </ul>
-                </div>
-                <div class="col-md-3 col-sm-6 footer-grid">
-                    <h3>Twitter Posts</h3>
-                    <ul class="w3agile_footer_grid_list">
-                        <li>Ut aut reiciendis voluptatibus <a href="#">http://example.com</a> alias, ut aut.
-                            <span><i class="fa fa-twitter" aria-hidden="true"></i> 02 days ago</span></li>
-                        <li>Itaque earum rerum hic tenetur a sapiente <a href="#">http://example.com</a> ut aut.
-                            <span><i class="fa fa-twitter" aria-hidden="true"></i> 03 days ago</span></li>
-                    </ul>
-                </div>
-                <div class="clearfix"></div>
-            </div>
-        </div>
-    </div>
-
-</div>
-<!-- //footer -->
+<?php
+include 'footer.php';
+?>
 <!-- modal-about -->
 <div class="modal bnr-modal fade" id="myModal" tabindex="-1" role="dialog">
     <div class="modal-dialog" role="document">
