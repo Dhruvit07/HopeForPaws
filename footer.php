@@ -61,8 +61,8 @@
                 <div class="col-md-3 col-sm-6 footer-grid">
                     <h3>Address</h3>
                     <ul class="w3agile_footer_grid_list">
-                        <li><a href="https://www.paruluniversity.ac.in/">Parul University</a>
-                        <li>Post Limda, Waghodia, Gujarat 391760, India</li>
+                        <li><a href="https://www.google.com/">Hope For Paws</a>
+                        <li>Address</li>
                     </ul>
                 </div>
                 <div class="clearfix"></div>
