@@ -1,6 +1,5 @@
 <?php
 require 'includes/connect.php';
-
 session_start();
 
 $email = $_POST['email'];
@@ -21,7 +20,7 @@ if (mysqli_num_rows($result) == 1) {
     echo '<script>window.location.href="index.php"</script>';
 } else {
     echo '<script>alert("Login Failed")</script>';
-    echo '<script>window.location.href="index.php"</script>';
+    echo '<script>window.location.href="login.php"</script>';
 }
 
 ?>
