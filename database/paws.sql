@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 06, 2022 at 08:11 AM
+-- Generation Time: Jan 11, 2022 at 06:16 AM
 -- Server version: 10.4.21-MariaDB
 -- PHP Version: 8.0.11
 
@@ -153,6 +153,20 @@ CREATE TABLE `product` (
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `productorder`
+--
+
+CREATE TABLE `productorder` (
+  `o_id` int(5) NOT NULL,
+  `u_id` int(5) NOT NULL,
+  `cart_t` int(11) NOT NULL,
+  `pay_id` int(11) NOT NULL,
+  `o_status` int(5) NOT NULL DEFAULT 0 COMMENT '0 - Ordered\r\n1 - Order Accepted\r\n2 - Order Delivered\r\n3 - Order Cancel'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `user`
 --
 
@@ -164,6 +178,13 @@ CREATE TABLE `user` (
   `u_password` varchar(255) NOT NULL,
   `u_status` int(2) NOT NULL DEFAULT 0 COMMENT ' 0 - Active/ 1 - Deactive'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `user`
+--
+
+INSERT INTO `user` (`u_id`, `u_name`, `u_phone`, `u_email`, `u_password`, `u_status`) VALUES
+(1, 'Alok Rathava', 4379897419, 'alokrathava@gmail.com', '@S3770k3g', 0);
 
 --
 -- Indexes for dumped tables
@@ -222,6 +243,12 @@ ALTER TABLE `pet_category`
 --
 ALTER TABLE `product`
   ADD PRIMARY KEY (`p_id`);
+
+--
+-- Indexes for table `productorder`
+--
+ALTER TABLE `productorder`
+  ADD PRIMARY KEY (`o_id`);
 
 --
 -- Indexes for table `user`
@@ -288,10 +315,16 @@ ALTER TABLE `product`
   MODIFY `p_id` int(5) NOT NULL AUTO_INCREMENT;
 
 --
+-- AUTO_INCREMENT for table `productorder`
+--
+ALTER TABLE `productorder`
+  MODIFY `o_id` int(5) NOT NULL AUTO_INCREMENT;
+
+--
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `u_id` int(5) NOT NULL AUTO_INCREMENT;
+  MODIFY `u_id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
