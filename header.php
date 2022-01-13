@@ -66,7 +66,7 @@
                                 <!--                                        <li><a href="codes.php" data-hover="Short Codes">Short Codes</a></li>-->
                                 <!--                                    </ul>-->
                                 <!--                                </li>-->
-                                <li><a href="gallery.php" data-hover="Gallery">E-Store</a></li>
+                                <li><a href="product.php" data-hover="Gallery">E-Store</a></li>
                                 <li><a href="contact.php" data-hover="Contact">Contact</a></li>
                             </ul>
                             <div class="clearfix"></div>

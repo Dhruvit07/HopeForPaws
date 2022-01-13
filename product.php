@@ -12,6 +12,246 @@
         function hideURLbar() {
             window.scrollTo(0, 1);
         } </script>
+        <style>
+        
+       
+
+<style>
+div.card{
+  
+    /* width: 300px; */
+}
+
+.image-container {
+    position: relative
+}
+
+.thumbnail-image {
+    border-radius: 10px !important
+}
+
+.discount {
+    background-color: red;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    padding-left: 4px;
+    padding-right: 4px;
+    font-size: 10px;
+    border-radius: 6px;
+    color: #fff
+}
+
+.wishlist {
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
+}
+
+.first {
+    position: absolute;
+    width: 100%;
+    padding: 9px
+}
+
+.dress-name {
+    font-size: 20px;
+    font-weight: bold;
+    width: 75%
+}
+
+.new-price {
+    font-size: 20px;
+    font-weight: bold;
+    color: red
+}
+
+.old-price {
+    font-size: 15px;
+    font-weight: bold;
+    color: grey
+}
+
+.btn {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    padding: 3px
+}
+
+.creme {
+    background-color: #fff;
+    border: 2px solid grey
+}
+
+.creme:hover {
+    border: 3px solid grey
+}
+
+.creme:focus {
+    background-color: grey
+}
+
+.red {
+    background-color: #fff;
+    border: 2px solid red
+}
+
+.red:hover {
+    border: 3px solid red
+}
+
+.red:focus {
+    background-color: red
+}
+
+.blue {
+    background-color: #fff;
+    border: 2px solid #40C4FF
+}
+
+.blue:hover {
+    border: 3px solid #40C4FF
+}
+
+.blue:focus {
+    background-color: #40C4FF
+}
+
+.darkblue {
+    background-color: #fff;
+    border: 2px solid #01579B
+}
+
+.darkblue:hover {
+    border: 3px solid #01579B
+}
+
+.darkblue:focus {
+    background-color: #01579B
+}
+
+.yellow {
+    background-color: #fff;
+    border: 2px solid #FFCA28
+}
+
+.yellow:hover {
+    border-radius: 3px solid #FFCA28
+}
+
+.yellow:focus {
+    background-color: #FFCA28
+}
+
+.item-size {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: #fff;
+    border: 1px solid grey;
+    color: grey;
+    font-size: 10px;
+    text-align: center;
+    align-items: center;
+    display: flex;
+    justify-content: center
+}
+
+.rating-star {
+    font-size: 15px !important
+}
+
+.rating-number {
+    font-size: 15px;
+    color: grey
+}
+
+.buy {
+    font-size: 18px;
+    color: purple;
+    font-weight: 500
+}
+
+.voutchers {
+    background-color: #fff;
+    border: none;
+    border-radius: 10px;
+    /* width: 300px; */
+ line-height: 20px;    
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    overflow: hidden
+}
+
+.voutcher-divider {
+    display: flex
+}
+
+.voutcher-left {
+    width: 60%
+}
+
+.voutcher-name {
+    color: grey;
+    font-size: 9px;
+    font-weight: 500
+}
+
+.voutcher-code {
+    color: red;
+    font-size: 11px;
+    font-weight: bold
+}
+
+.voutcher-right {
+    width: 40%;
+    background-color: #6495ed;
+    color: #fff
+}
+
+.discount-percent {
+    font-size: 15px;
+    font-weight: bold;
+    position: relative;
+    top: 5px;
+    line-height: 25px;
+}
+
+.off {
+    font-size: 14px;
+    position: relative;
+    bottom: 5px
+}
+.align-items-center {
+    -ms-flex-align: center!important;
+    align-items: center!important;
+}
+
+.justify-content-between {
+    -ms-flex-pack: justify!important;
+    justify-content: space-between!important;
+}
+.d-flex {
+    display: -ms-flexbox!important;
+    display: flex!important;
+}
+.mb-2, .my-2 {
+    margin-bottom: 0.5rem!important;
+}
+.flex-column {
+    -ms-flex-direction: column!important;
+    flex-direction: column!important;
+}
+.p-2 {
+    padding: 0.5rem!important;
+    padding-top: 1.0rem !important;
+    padding-bottom: 1.0rem !important;
+}
+        </style> 
     <!-- Custom Theme files -->
     <link href="css/bootstrap.css" type="text/css" rel="stylesheet" media="all">
     <link href="css/style.css" type="text/css" rel="stylesheet" media="all">
@@ -21,7 +261,9 @@
     <!-- web-fonts -->
     <link href="//fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
     <link href="//fonts.googleapis.com/css?family=Dosis:200,300,400,500,600,700,800" rel="stylesheet">
+   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <!-- //web-fonts -->
+    
 </head>
 <body>
 <!-- banner -->
@@ -32,113 +274,57 @@ include 'header.php';
 <!-- gallery -->
 <div class="gallery team">
     <div class="container">
-        <h3 class="agileits-title w3title2">Gallery</h3>
+        <h3 class="agileits-title w3title2">Product</h3>
         <div class="agile_gallery_grids">
-            <div class="col-sm-4 col-xs-4 agile_gallery_grid">
-                <div class="w3ls_gallery_grid">
-                    <a href="images/g1.jpg" class="lsb-preview wthree_p_grid" data-lsb-group="header">
-                        <img src="images/g1.jpg" alt=" " class="img-responsive"/>
-                        <div class="agileinfo_content_wrap">
-                            <div class="agileits_content">
-                                <h3>Best Pets</h3>
-                                <p>Ne nam facilisis adolescens faucibus.</p>
-                            </div>
+       
+            
+        <div class="col-sm-4 col-xs-4 agile_gallery_grid" style="  padding:0px; border: none;  width : 300px;  border-radius: 10px;">
+            <div class="card"  style="  padding:0px; background-color: #fff; border: none; overflow:hidden;  width : 300px;  border-radius: 10px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)">
+                <div class="w3ls_gallery_grid"  >
+                    <div class="image-container">
+                        <div class="first">
+                            <div class="d-flex justify-content-between align-items-center" style="position: relative; z-index: 3;"> 
+                            <span class="discount">-25%</span> <span class="wishlist"><i class="fa fa-heart-o"></i></span> </div>
                         </div>
-                    </a>
+                
+                        <a href="https://i.imgur.com/8JIWpnw.jpg" class="lsb-preview wthree_p_grid mg-fluid rounded thumbnail-image" data-lsb-group="header" style="border-radius:10px" >
+                            <img src="https://i.imgur.com/8JIWpnw.jpg" alt=" " class="img-responsive" style="border-radius:10px; height: 300px; object-fit: cover;" />
+                            <div class="agileinfo_content_wrap">
+                                <div class="agileits_content">
+                                    <h3>Best Pets</h3>
+                                    <p>Ne nam facilisis adolescens faucibus.</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
                 </div>
-                <div class="w3ls_gallery_grid">
-                    <a href="images/g2.jpg" class="lsb-preview wthree_p_grid" data-lsb-group="header">
-                        <img src="images/g2.jpg" alt=" " class="img-responsive"/>
-                        <div class="agileinfo_content_wrap">
-                            <div class="agileits_content">
-                                <h3>Best Pets</h3>
-                                <p>Ne nam facilisis adolescens faucibus.</p>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="w3ls_gallery_grid">
-                    <a href="images/g3.jpg" class="lsb-preview wthree_p_grid" data-lsb-group="header">
-                        <img src="images/g3.jpg" alt=" " class="img-responsive"/>
-                        <div class="agileinfo_content_wrap">
-                            <div class="agileits_content">
-                                <h3>Best Pets</h3>
-                                <p>Ne nam facilisis adolescens faucibus.</p>
-                            </div>
-                        </div>
-                    </a>
+                <div class="product-detail-container p-2">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <h4 class="dress-name">White traditional long dress</h4>
+                        <div class="d-flex flex-column mb-2"> <span class="new-price">$3.99</span> <small class="old-price text-right">$5.99</small> </div>
+                    </div>
+                   
+                    <div class="d-flex justify-content-between align-items-center pt-1">
+                        <div> <i class="fa fa-star-o rating-star"></i> <span class="rating-number">4.8</span> </div> <span class="buy">BUY +</span>
+                    </div>
                 </div>
             </div>
-            <div class="col-sm-4 col-xs-4 agile_gallery_grid">
-                <div class="w3ls_gallery_grid">
-                    <a href="images/g4.jpg" class="lsb-preview wthree_p_grid" data-lsb-group="header">
-                        <img src="images/g4.jpg" alt=" " class="img-responsive"/>
-                        <div class="agileinfo_content_wrap">
-                            <div class="agileits_content">
-                                <h3>Best Pets</h3>
-                                <p>Ne nam facilisis adolescens faucibus.</p>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="w3ls_gallery_grid">
-                    <a href="images/g5.jpg" class="lsb-preview wthree_p_grid" data-lsb-group="header">
-                        <img src="images/g5.jpg" alt=" " class="img-responsive"/>
-                        <div class="agileinfo_content_wrap">
-                            <div class="agileits_content">
-                                <h3>Best Pets</h3>
-                                <p>Ne nam facilisis adolescens faucibus.</p>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="w3ls_gallery_grid">
-                    <a href="images/g6.jpg" class="lsb-preview wthree_p_grid" data-lsb-group="header">
-                        <img src="images/g6.jpg" alt=" " class="img-responsive"/>
-                        <div class="agileinfo_content_wrap">
-                            <div class="agileits_content">
-                                <h3>Best Pets</h3>
-                                <p>Ne nam facilisis adolescens faucibus.</p>
-                            </div>
-                        </div>
-                    </a>
-                </div>
+            <div style="height: 15px">
             </div>
-            <div class="col-sm-4 col-xs-4 agile_gallery_grid">
-                <div class="w3ls_gallery_grid">
-                    <a href="images/g7.jpg" class="lsb-preview wthree_p_grid" data-lsb-group="header">
-                        <img src="images/g7.jpg" alt=" " class="img-responsive"/>
-                        <div class="agileinfo_content_wrap">
-                            <div class="agileits_content">
-                                <h3>Best Pets</h3>
-                                <p>Ne nam facilisis adolescens faucibus.</p>
+            <div class="mt-3">
+                    <div class="card voutchers" >
+                        <div class="voutcher-divider">
+                            <div class="voutcher-left text-center"> <span class="voutcher-name">Monday Happy</span>
+                                <h4 class="voutcher-code">#MONHPY</h4>
+                            </div>
+                            <div class="voutcher-right text-center border-left">
+                                <h4 class="discount-percent">20%</h4> <span class="off">Off</span>
                             </div>
                         </div>
-                    </a>
-                </div>
-                <div class="w3ls_gallery_grid">
-                    <a href="images/g3.jpg" class="lsb-preview wthree_p_grid" data-lsb-group="header">
-                        <img src="images/g3.jpg" alt=" " class="img-responsive"/>
-                        <div class="agileinfo_content_wrap">
-                            <div class="agileits_content">
-                                <h3>Best Pets</h3>
-                                <p>Ne nam facilisis adolescens faucibus.</p>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="w3ls_gallery_grid">
-                    <a href="images/g2.jpg" class="lsb-preview wthree_p_grid" data-lsb-group="header">
-                        <img src="images/g2.jpg" alt=" " class="img-responsive"/>
-                        <div class="agileinfo_content_wrap">
-                            <div class="agileits_content">
-                                <h3>Best Pets</h3>
-                                <p>Ne nam facilisis adolescens faucibus.</p>
-                            </div>
-                        </div>
-                    </a>
-                </div>
+                    </div>
             </div>
+        </div>
+               
             <div class="clearfix"></div>
         </div>
     </div>

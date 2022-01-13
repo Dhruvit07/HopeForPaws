@@ -63,7 +63,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 											<li><a href="codes.php" data-hover="Short Codes">Short Codes</a></li>
 										</ul>
 									</li> 
-									<li><a href="gallery.php" data-hover="Gallery">Gallery</a></li>
+									<li><a href="product.php" data-hover="Gallery">Gallery</a></li>
 									<li><a href="contact.php" data-hover="Contact">Contact</a></li>
 								</ul>  
 								<div class="clearfix"> </div>	
@@ -1123,7 +1123,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 						<ul>
 							<li><a href="index.php">Home</a> </li>
 							<li><a href="about.php">About</a></li>
-							<li><a href="gallery.php">Gallery</a></li>
+							<li><a href="product.php">Gallery</a></li>
 							<li><a href="icons.php">Web Icons</a></li>
 							<li><a href="codes.php">Short Codes</a></li>
 							<li><a href="contact.php">Contact</a></li>
