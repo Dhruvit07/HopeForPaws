@@ -3,11 +3,10 @@ require 'includes/connect.php';
 
 session_start();
 
-if (isset($_SESSION['a_id'])) {
+if (!isset($_SESSION['a_id'])) {
     echo '<script>window.location.href="login.php"</script>';
 }
-//$a_name = $_SESSION["a_name"];
-$a_name = "Admin";
+$a_name = $_SESSION["a_name"];
 ?>
 <!DOCTYPE html>
 <html lang="en">
