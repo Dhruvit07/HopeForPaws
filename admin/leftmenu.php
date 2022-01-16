@@ -36,7 +36,7 @@ $a_name = $_SESSION["a_name"];
                     <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLayouts"
                        aria-expanded="false" aria-controls="collapseLayouts">
                         <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
-                        Product
+                        Products | Adoption
                         <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                     </a>
                     <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne"
@@ -44,23 +44,7 @@ $a_name = $_SESSION["a_name"];
                         <nav class="sb-sidenav-menu-nested nav">
                             <a class="nav-link" href="addCategories.php">Add Category</a>
                             <a class="nav-link" href="addProduct.php">Add Product</a>
-                        </nav>
-                    </div>
-                    <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapsePages"
-                       aria-expanded="false" aria-controls="collapsePages">
-                        <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
-                        Adoption
-                        <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
-                    </a>
-                    <div class="collapse" id="collapsePages" aria-labelledby="headingTwo"
-                         data-bs-parent="#sidenavAccordion">
-                        <nav class="sb-sidenav-menu-nested nav accordion" id="sidenavAccordionPages">
-                            <a class="nav-link collapsed" href="adoption.php" data-bs-toggle="collapse"
-                               data-bs-target="#pagesCollapseAuth" aria-expanded="false"
-                               aria-controls="pagesCollapseAuth">
-                                Adoption List
-                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
-                            </a>
+                            <a class="nav-link" href="adoption.php">Adoption</a>
                         </nav>
                     </div>
                     <div class="sb-sidenav-menu-heading">Add Ons</div>
