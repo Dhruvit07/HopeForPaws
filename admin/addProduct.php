@@ -112,15 +112,20 @@
                             </tfoot>
                             <?php
                             $c = 1;
-                            $userSQL = "SELECT * FROM `category`";
-                            $result = $conn->query($userSQL);
+                            $productSQL = "SELECT * FROM `product`JOIN category ON category.cat_id = product.cat_id";
+                            $result = $conn->query($productSQL);
                             if ($result->num_rows > 0) {
                                 while ($row = $result->fetch_assoc()) {
                                     echo '<tbody>';
                                     echo '<tr>';
                                     echo '</tr>';
                                     echo '<td>' . $c++ . '</td>';
+                                    echo '<td>' . $row["p_name"] . '</td>';
                                     echo '<td>' . $row["cat_name"] . '</td>';
+                                    echo '<td>' . $row["p_price"] . '</td>';
+                                    echo '<td><img src=' . $row["p_image"] . ' height="100px" width="100px;"/></td>';
+                                    echo '<td>' . $row["p_desc"] . '</td>';
+                                    echo '<td><a href="extension/productOperation.php/?deleteProduct=' . $row['p_id'] . '" class="btn btn-danger btn-block">Delete</a></td>';
                                     echo '</tbody>';
                                 }
                             }

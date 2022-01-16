@@ -50,12 +50,14 @@
                             <tr>
                                 <th>Id#</th>
                                 <th>Category</th>
+                                <th>Operations</th>
                             </tr>
                             </thead>
                             <tfoot>
                             <tr>
                                 <th>Id#</th>
                                 <th>Category</th>
+                                <th>Operation</th>
                             </tr>
                             </tfoot>
                             <?php
@@ -69,6 +71,7 @@
                                     echo '</tr>';
                                     echo '<td>' . $c++ . '</td>';
                                     echo '<td>' . $row["cat_name"] . '</td>';
+                                    echo '<td> <a href="extension/categoryOperation.php/?deleteCategory=' . $row['cat_id'] . '" class="btn btn-danger btn-block">Delete</a> </td>';
                                     echo '</tbody>';
                                 }
                             }
