@@ -37,7 +37,14 @@
                     </div>
                     <div class="agileits_w3layouts_sign_in">
                         <ul>
-                            <li><a href="#myModal2" data-toggle="modal" class="play-icon">Login</a></li>
+                            <?php
+                            if (!isset($_SESSION['loggedin']))
+                            {
+                                ?>
+                                <li><a href="#myModal2" data-toggle="modal" class="play-icon">Login</a></li>
+                            <?php
+                            }
+                            ?>
                             <li>Call us : <span>(1800) 989 7419</span></li>
                         </ul>
                     </div>
@@ -97,8 +104,8 @@
                             <div class="tab-1 resp-tab-content" aria-labelledby="tab_item-0">
                                 <div class="agileits-login">
                                     <form action="auth/login_process.php" method="post">
-                                        <input type="email" class="email" name="Email" placeholder="Email" required=""/>
-                                        <input type="password" class="password" name="Password" placeholder="Password"
+                                        <input type="email" class="email" name="email" placeholder="Email" required=""/>
+                                        <input type="password" class="password" name="password" placeholder="Password"
                                                required=""/>
                                         <div class="wthree-text">
                                             <ul>
