@@ -4,7 +4,7 @@ require '../includes/connect.php';
 session_start();
 
 if ($_SERVER['REQUEST_METHOD'] != 'POST') {
-    header("location: e404.php");
+    header("location: e403.php");
     exit();
 }
 

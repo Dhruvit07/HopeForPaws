@@ -1,4 +1,7 @@
 <!DOCTYPE html>
+<?php
+session_start();
+?>
 <html lang="en">
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -21,7 +24,33 @@
     <!-- web-fonts -->
     <link href="//fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
     <link href="//fonts.googleapis.com/css?family=Dosis:200,300,400,500,600,700,800" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
     <!-- //web-fonts -->
+    <style>
+        .fade.in {
+    opacity: 1;
+}
+.alert-primary {
+    color: #31708f;
+    background-color: #d9edf7;
+    border-color: #bce8f1;
+}
+.alert-dismissable, .alert-dismissible {
+    padding-right: 35px;
+}
+.alert {
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+.fade {
+    opacity: 0;
+    -webkit-transition: opacity .15s linear;
+    -o-transition: opacity .15s linear;
+    transition: opacity .15s linear;
+}
+        </style>
 </head>
 <body>
 <!-- banner -->
@@ -54,6 +83,19 @@
                         </div>
                         <!-- top-nav -->
                         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <?php
+
+                            if (isset($_GET['exist']) && $_GET['exist'] == true) {
+
+                                echo ' <div class="alert alert-primary" style="margin-top:10px">  Email Already Exist! </div>';
+                            }
+
+
+                            if (isset($_GET['error']) && isset($_SESSION['error'])) {
+                                echo ' <div class="alert alert-primary"  style="margin-top:10px"> ' . $_SESSION['error'] . ' </div>';
+                                unset($_SESSION['error']);
+                            }
+                            ?>
                             <ul class="nav navbar-nav cl-effect-16">
                                 <li><a href="index.php" class="x`   active" data-hover="Home">Home</a></li>
                                 <li><a href="about.php" data-hover="About">About</a></li>
@@ -75,8 +117,11 @@
         </div>
         <!-- //header -->
         <!-- banner-text -->
+        
         <div class="banner-text agileinfo">
+      
             <div class="container">
+            
                 <div class="agile_banner_info">
                     <div class="agile_banner_info1">
                         <h6>What we offer?</h6>
@@ -404,5 +449,6 @@ include 'footer.php';
 ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
 <script src="js/bootstrap.js"></script>
+
 </body>
 </html>
