@@ -125,7 +125,7 @@
                                     echo '<td>' . $row["p_price"] . '</td>';
                                     echo '<td><img src=' . $row["p_image"] . ' height="100px" width="100px;"/></td>';
                                     echo '<td>' . $row["p_desc"] . '</td>';
-                                    echo '<td><a href="extension/productOperation.php/?deleteProduct=' . $row['p_id'] . '" class="btn btn-danger btn-block">Delete</a></td>';
+                                    echo '<td><a href="productOperation.php?deleteProduct=' . $row['p_id'] . '" class="btn btn-danger btn-block">Delete</a></td>';
                                     echo '</tbody>';
                                 }
                             }
