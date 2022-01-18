@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -42,6 +45,11 @@
                             {
                                 ?>
                                 <li><a href="#myModal2" data-toggle="modal" class="play-icon">Login</a></li>
+                            <?php
+                            }
+                            else{
+                            ?>
+                             <li> <a href="logout.php"  class="play-icon">Logout</a></li>  
                             <?php
                             }
                             ?>

@@ -7,7 +7,7 @@ if ($_SERVER['REQUEST_METHOD'] != 'POST') {
     header("location: e404.php");
     exit();
 }
-echo "Hello WOrld";
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") { 
     //Data Fetch
     $email = $_POST['email'];
@@ -30,7 +30,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $_SESSION['u_name'] = $u_name;
         }
 
-        echo '<script>window.location.href="index.php"</script>';
+        echo '<script>window.location.href="../index.php"</script>';
     } else {
 
         $error = true;

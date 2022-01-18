@@ -1,5 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
+<?php
+include 'header.php';
+?>
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
@@ -267,9 +270,7 @@ div.card{
 </head>
 <body>
 <!-- banner -->
-<?php
-include 'header.php';
-?>
+
 <!-- //banner -->
 <!-- gallery -->
 <div class="gallery team">
