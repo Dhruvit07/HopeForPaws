@@ -254,6 +254,8 @@ div.card{
     padding-top: 1.0rem !important;
     padding-bottom: 1.0rem !important;
 }
+
+
         </style> 
     <!-- Custom Theme files -->
     <link href="css/bootstrap.css" type="text/css" rel="stylesheet" media="all">
@@ -276,58 +278,14 @@ div.card{
 <div class="gallery team">
     <div class="container">
         <h3 class="agileits-title w3title2">Product</h3>
-        <div class="agile_gallery_grids">
+        <div class="agile_gallery_grids" id="container">
        
             
-        <div class="col-sm-4 col-xs-4 agile_gallery_grid" style="  padding:0px; border: none;  width : 300px;  border-radius: 10px;">
-            <div class="card"  style="  padding:0px; background-color: #fff; border: none; overflow:hidden;  width : 300px;  border-radius: 10px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)">
-                <div class="w3ls_gallery_grid"  >
-                    <div class="image-container">
-                        <div class="first">
-                            <div class="d-flex justify-content-between align-items-center" style="position: relative; z-index: 3;"> 
-                            <span class="discount">-25%</span> <span class="wishlist"><i class="fa fa-heart-o"></i></span> </div>
-                        </div>
-                
-                        <a href="https://i.imgur.com/8JIWpnw.jpg" class="lsb-preview wthree_p_grid mg-fluid rounded thumbnail-image" data-lsb-group="header" style="border-radius:10px" >
-                            <img src="https://i.imgur.com/8JIWpnw.jpg" alt=" " class="img-responsive" style="border-radius:10px; height: 300px; object-fit: cover;" />
-                            <div class="agileinfo_content_wrap">
-                                <div class="agileits_content">
-                                    <h3>Best Pets</h3>
-                                    <p>Ne nam facilisis adolescens faucibus.</p>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-                <div class="product-detail-container p-2">
-                    <div class="d-flex justify-content-between align-items-center">
-                        <h4 class="dress-name">White traditional long dress</h4>
-                        <div class="d-flex flex-column mb-2"> <span class="new-price">$3.99</span> <small class="old-price text-right">$5.99</small> </div>
-                    </div>
-                   
-                    <div class="d-flex justify-content-between align-items-center pt-1">
-                        <div> <i class="fa fa-star-o rating-star"></i> <span class="rating-number">4.8</span> </div> <span class="buy">BUY +</span>
-                    </div>
-                </div>
-            </div>
-            <div style="height: 15px">
-            </div>
-            <div class="mt-3">
-                    <div class="card voutchers" >
-                        <div class="voutcher-divider">
-                            <div class="voutcher-left text-center"> <span class="voutcher-name">Monday Happy</span>
-                                <h4 class="voutcher-code">#MONHPY</h4>
-                            </div>
-                            <div class="voutcher-right text-center border-left">
-                                <h4 class="discount-percent">20%</h4> <span class="off">Off</span>
-                            </div>
-                        </div>
-                    </div>
-            </div>
-        </div>
+            
+        
+        
                
-            <div class="clearfix"></div>
-        </div>
+           
     </div>
 </div>
 <!-- //gallery -->
@@ -502,5 +460,37 @@ include 'footer.php';
 ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
 <script src="js/bootstrap.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.js"
+integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous">
+</script>
+
+<script>
+$(document).ready(function() {
+function loadTable(page) {
+    $.post("partials/prodpagination.php", {
+            page_no: page
+
+        },
+        function(data, status) {
+            $("#container").html(data);
+        }
+    );
+}
+loadTable();
+
+
+//Pagination Code
+$(document).on("click", "#pagination li a", function(e) {
+    e.preventDefault();
+    page_id = $(this).attr("id");
+
+    loadTable(page_id);
+
+});
+
+});
+</script>
 </body>
 </html>
