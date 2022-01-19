@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 11, 2022 at 06:16 AM
--- Server version: 10.4.21-MariaDB
--- PHP Version: 8.0.11
+-- Generation Time: Jan 15, 2022 at 07:54 AM
+-- Server version: 10.4.22-MariaDB
+-- PHP Version: 8.1.1
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -79,6 +79,14 @@ CREATE TABLE `category` (
   `cat_name` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dumping data for table `category`
+--
+
+INSERT INTO `category` (`cat_id`, `cat_name`) VALUES
+(1, 'Dog Food'),
+(2, 'Cat Food');
+
 -- --------------------------------------------------------
 
 --
@@ -88,7 +96,7 @@ CREATE TABLE `category` (
 CREATE TABLE `complaint` (
   `c_id` int(5) NOT NULL,
   `u_id` int(5) NOT NULL,
-  `c_desc` varchar(255) NOT NULL
+  `c_name` varchar(30) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -147,7 +155,8 @@ CREATE TABLE `product` (
   `p_id` int(5) NOT NULL,
   `cat_id` int(5) NOT NULL,
   `p_desc` varchar(255) NOT NULL,
-  `p_price` int(11) NOT NULL
+  `p_price` int(11) NOT NULL,
+  `p_image` varchar(256) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -282,7 +291,7 @@ ALTER TABLE `cart`
 -- AUTO_INCREMENT for table `category`
 --
 ALTER TABLE `category`
-  MODIFY `cat_id` int(5) NOT NULL AUTO_INCREMENT;
+  MODIFY `cat_id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `complaint`
