@@ -65,6 +65,19 @@ session_start();
                     </div>
                     <div class="agileits_w3layouts_sign_in">
                         <ul>
+                        <?php
+                            if (!isset($_SESSION['loggedin']))
+                            {
+                                ?>
+                                <li><a href="#myModal2" data-toggle="modal" class="play-icon">Login</a></li>
+                            <?php
+                            }
+                            else{
+                            ?>
+                             <li> <a href="logout.php"  class="play-icon">Logout</a></li>  
+                            <?php
+                            }
+                            ?>
                             <li>Call us : <span>(1800) 989 7419</span></li>
                         </ul>
                     </div>
@@ -84,6 +97,13 @@ session_start();
                         <!-- top-nav -->
                         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                         <?php
+                        if (isset($_GET['login'])){
+                            echo '
+                                <div class="alert alert-primary" style="margin:15px">
+                                You Must be Logged in to use this Feature. 
+                                </div>';
+    
+                        }
 
                             if (isset($_GET['exist']) && $_GET['exist'] == true) {
 
@@ -106,7 +126,16 @@ session_start();
                                 <!--                                        <li><a href="codes.php" data-hover="Short Codes">Short Codes</a></li>-->
                                 <!--                                    </ul>-->
                                 </li>
-                                <li><a href="product.php" data-hover="Gallery">E-Store</a></li>
+                              <?php
+                                if (isset($_SESSION['loggedin']))
+                            {
+                                ?>
+                                <li><a href="product.php" data-hover="E-Store">E-Store</a></li>
+                                <li><a href="cart.php" data-hover="Cart">Cart</a></li>
+
+                                <?php
+                            }
+                                ?>
                                 <li><a href="contact.php" data-hover="Contact">Contact</a></li>
                             </ul>
                             <div class="clearfix"></div>
@@ -268,65 +297,83 @@ session_start();
 include 'footer.php';
 ?>
 <!-- modal sign in  -->
-<!-- <div class="modal bnr-modal about-modal w3-agileits fade" id="myModal2" tabindex="-1" role="dialog">
+<div class="modal bnr-modal about-modal w3-agileits fade" id="myModal2" tabindex="-1" role="dialog">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
                 </button>
-            </div> -->
-<!-- login-page -->
-<!--     <div class="modal-body login-page ">
-         <div class="sap_tabs">
-             <div id="horizontalTab" style="display: block; width: 100%; margin: 0px;">
-                 <ul class="resp-tabs-list">
-                     <li class="resp-tab-item" aria-controls="tab_item-0"><span>Login</span></li>
-                     <li class="resp-tab-item" aria-controls="tab_item-1"><span>Register</span></li>
-                 </ul>
-                 <div class="clearfix"></div>
-                 <div class="resp-tabs-container">
-                     <div class="tab-1 resp-tab-content" aria-labelledby="tab_item-0">
-                         <div class="agileits-login">
-                             <form action="auth/login_process.php" method="post">
-                                 <input type="email" class="email" name="Email" placeholder="Email" required=""/>
-                                 <input type="password" class="password" name="Password" placeholder="Password"
-                                        required=""/>
-                                 <div class="wthree-text">
-                                     <ul>
-                                         <li>
-                                             <label class="anim">
-                                                 <input type="checkbox" class="checkbox">
-                                                 <span> Remember me ?</span>
-                                             </label>
-                                         </li>
-                                         <li><a href="#">Forgot password?</a></li>
-                                     </ul>
-                                     <div class="clearfix"></div>
-                                 </div>
-                                 <div class="w3ls-submit">
-                                     <input type="submit" value="LOGIN">
-                                 </div>
-                             </form>
-                         </div>
-                     </div>
-                     <div class="tab-1 resp-tab-content" aria-labelledby="tab_item-1">
-                         <div class="login-top sign-top">
-                             <div class="agileits-login">
-                                 <form action="auth/registration_process.php" method="post">
-                                     <input type="text" name="name" placeholder="Full Name" required="">
-                                     <input type="text" name="phone" placeholder="Phone Number" required="">
-                                     <input type="email" class="email" name="Email" placeholder="Email"
-                                            required=""/>
-                                     <input type="password" class="password" name="Password"
-                                            placeholder="Password" required=""/>
-                                     <label class="anim">
-                                         <input type="checkbox" class="checkbox">
-                                         <span> I accept the terms of use</span>
-                                     </label>
-                                     <div class="w3ls-submit">
-                                         <input class="register" type="submit" value="REGISTER">
-                                     </div>
-                                 </form>
+            </div>
+            <div class="modal-body login-page "><!-- login-page -->
+                <div class="sap_tabs">
+                    <div id="horizontalTab" style="display: block; width: 100%; margin: 0px;">
+                        <ul class="resp-tabs-list">
+                            <li class="resp-tab-item" aria-controls="tab_item-0"><span>Login</span></li>
+                            <li class="resp-tab-item" aria-controls="tab_item-1"><span>Register</span></li>
+                        </ul>
+                        <div class="clearfix"></div>
+                        <div class="resp-tabs-container">
+                            <div class="tab-1 resp-tab-content" aria-labelledby="tab_item-0">
+                                <div class="agileits-login">
+                                    <form action="auth/login_process.php"  method="post">
+                                    <div class="form-field">    
+                                    <input type="email" class="email"  name="email" placeholder="Email" required=""/>
+                                    <small></small>
+                                </div>   
+                                    <input type="password" class="password" name="password" placeholder="Password"
+                                               required=""/>
+                                        <div class="wthree-text">
+                                            <ul>
+                                                <li>
+                                                    <label class="anim">
+                                                        <input type="checkbox" class="checkbox">
+                                                        <span> Remember me ?</span>
+                                                    </label>
+                                                </li>
+                                                <li><a href="#">Forgot password?</a></li>
+                                            </ul>
+                                            <div class="clearfix"></div>
+                                        </div>
+                                        <div class="w3ls-submit">
+                                            <input type="submit" value="LOGIN">
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="tab-1 resp-tab-content" aria-labelledby="tab_item-1">
+                                <div class="login-top sign-top">
+                                    <div class="agileits-login">
+                                <form action="auth/registration_process.php" id="signup" method="post">
+                                        <div class="form-field">
+                                        <input type="text" name="username" class="username" id="username" placeholder="Full Name*" required="">
+                                        <small></small>
+                            </div>
+                        <div class="form-field">
+                                            <input type="text" class="phone" id="phone" name="phone" placeholder="Phone Number*" 
+                                         required=""/>
+                                        <small></small>
+                        </div>
+                        <div class="form-field">
+                                            <input type="email" class="email" id="email" name="email" placeholder="Email*"
+                                                   required=""/>
+                                                   <small></small>
+                        </div>
+                        <div class="form-field">
+                                            <input type="password" class="password" id="password" name="password"
+                                                   placeholder="Password*" required=""/>
+                                                   <small></small>
+                        </div>
+                        <div class="form-field">
+                        <input type="password" class="confirm-password" id="confirm-password" name="confirm-password"
+                                                   placeholder="Password*" required=""/>
+                <small></small>
+            </div>
+            
+                                            <div class="w3ls-submit">
+                                                <input class="register" id="register" type="submit" value="register">
+                                            </div>
+                      
+                                        </form>
                              </div>
                          </div>
                      </div>
@@ -337,7 +384,7 @@ include 'footer.php';
      </div> --> <!-- //login-page -->
 <!--    </div>
 </div>
-</div> -->
+</div>
 <!-- //modal sign in -->
 <!-- js -->
 <script src="js/jquery-2.2.3.min.js"></script>

@@ -72,74 +72,7 @@
 </div>
 <!-- //footer -->
 <!-- modal sign in  -->
-<div class="modal bnr-modal about-modal w3-agileits fade" id="myModal2" tabindex="-1" role="dialog">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body login-page "><!-- login-page -->
-                <div class="sap_tabs">
-                    <div id="horizontalTab" style="display: block; width: 100%; margin: 0px;">
-                        <ul class="resp-tabs-list">
-                            <li class="resp-tab-item" aria-controls="tab_item-0"><span>Login</span></li>
-                            <li class="resp-tab-item" aria-controls="tab_item-1"><span>Register</span></li>
-                        </ul>
-                        <div class="clearfix"></div>
-                        <div class="resp-tabs-container">
-                            <div class="tab-1 resp-tab-content" aria-labelledby="tab_item-0">
-                                <div class="agileits-login">
-                                    <form action="#" method="post">
-                                        <input type="email" class="email" name="Email" placeholder="Email" required=""/>
-                                        <input type="password" class="password" name="Password" placeholder="Password"
-                                               required=""/>
-                                        <div class="wthree-text">
-                                            <ul>
-                                                <li>
-                                                    <label class="anim">
-                                                        <input type="checkbox" class="checkbox">
-                                                        <span> Remember me ?</span>
-                                                    </label>
-                                                </li>
-                                                <li><a href="#">Forgot password?</a></li>
-                                            </ul>
-                                            <div class="clearfix"></div>
-                                        </div>
-                                        <div class="w3ls-submit">
-                                            <input type="submit" value="LOGIN">
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
-                            <div class="tab-1 resp-tab-content" aria-labelledby="tab_item-1">
-                                <div class="login-top sign-top">
-                                    <div class="agileits-login">
-                                        <form action="#" method="post">
-                                            <input type="text" name="Name" placeholder="Full Name" required="">
-                                            <input type="email" class="email" name="Email" placeholder="Email"
-                                                   required=""/>
-                                            <input type="password" class="password" name="Password"
-                                                   placeholder="Password" required=""/>
-                                            <label class="anim">
-                                                <input type="checkbox" class="checkbox">
-                                                <span> I accept the terms of use</span>
-                                            </label>
-                                            <div class="w3ls-submit">
-                                                <input class="register" type="submit" value="REGISTER">
-                                            </div>
-                                        </form>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="clearfix"></div>
-                </div>
-            </div> <!-- //login-page -->
-        </div>
-    </div>
-</div>
+
 <!-- //modal sign in -->
 <!-- js -->
 <script src="js/jquery-2.2.3.min.js"></script>

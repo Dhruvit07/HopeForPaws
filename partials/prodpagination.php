@@ -2,6 +2,10 @@
 require '../includes/connect.php';
 session_start();
 
+$discount = array(15, 10,20,25);
+$coupon = array("#DHRUVIT","#MONDAI","#FUCKYOU","#FUCKEVERYONE");
+$rating = array(5.0,1.0,2.0,2.5,4.0,4.2,3.3,4.3);
+
 $limit_per_page = 9;
 
 if (isset($_POST["page_no"])) {
@@ -30,12 +34,14 @@ if (isset($_SESSION['loggedin'])) {
     $j = 1;
     // $output .= '';
     while ($row = mysqli_fetch_assoc($result)) {
-
+        $i = rand(0,3);
+        $k = rand(0,4);
+        $j = rand(0,7);
         $id = $row['p_id'];
         $name = $row['p_name'];
         $descc = $row['p_desc'];
         $price = $row['p_price'];
-        $new_price = $price - (0.15*$price);
+        $new_price = $price - (($discount[$i]/100)*$price);
         $img = $row['p_image'];
         $cat = $row['cat_id'];
         // $quan = $row['p_quantity'];
@@ -54,7 +60,7 @@ if (isset($_SESSION['loggedin'])) {
              <div class="image-container">
                  <div class="first">
                      <div class="d-flex justify-content-between align-items-center" style="position: relative; z-index: 3;"> 
-                     <span class="discount">-15%</span> <span class="wishlist"><i class="fa fa-heart-o"></i></span> </div>
+                     <span class="discount">'.$discount[$i].'%</span> <span class="wishlist"><i class="fa fa-heart-o"></i></span> </div>
                  </div>
          
                  <a href="'. $img . '" class="lsb-preview wthree_p_grid mg-fluid rounded thumbnail-image" data-lsb-group="header" style="border-radius:10px" >
@@ -75,7 +81,7 @@ if (isset($_SESSION['loggedin'])) {
              </div>
             
              <div class="d-flex justify-content-between align-items-center pt-1">
-                 <div> <i class="fa fa-star-o rating-star"></i> <span class="rating-number"> 4.1 </span> </div> <span class="buy"><input type="submit" class="buy" value="BUY +" href="cart.php"></span>
+                 <div> <i class="fa fa-star-o rating-star"></i> <span class="rating-number"> '.$rating[$j].' </span> </div> <span class="buy"><input type="number" style="margin-right:5px" name="quantity" min="1" max="10" value="1" size="2" /><input type="submit" class="buy" value="BUY +" href="cart.php"></span>
              </div>
          </div>
      </div>
@@ -84,11 +90,11 @@ if (isset($_SESSION['loggedin'])) {
      <div class="mt-3">
              <div class="card voutchers" >
                  <div class="voutcher-divider">
-                     <div class="voutcher-left text-center"> <span class="voutcher-name">Monday Happy</span>
-                         <h4 class="voutcher-code">#MONHPY</h4>
+                     <div class="voutcher-left text-center"> <span class="voutcher-name">Happy Coupon</span>
+                         <h4 class="voutcher-code">'.$coupon[$k].'</h4>
                      </div>
                      <div class="voutcher-right text-center border-left">
-                         <h4 class="discount-percent">20%</h4> <span class="off">Off</span>
+                         <h4 class="discount-percent">'.$discount[$i].'%</h4> <span class="off">Off</span>
                      </div>
                  </div>
              </div>
@@ -127,7 +133,7 @@ if (isset($_SESSION['loggedin'])) {
     $output .= ' </ul>
             </div>
         </div>
-    </div>
+    
     ';
     echo $output;
 } else {

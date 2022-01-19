@@ -166,7 +166,14 @@ session_start();
                                 <!--                                        <li><a href="codes.php" data-hover="Short Codes">Short Codes</a></li>-->
                                 <!--                                    </ul>-->
                                 <!--                                </li>-->
+                               <?php
+                                if (isset($_SESSION['loggedin']))
+                            {
+                                ?>
                                 <li><a href="product.php" data-hover="E-Store">E-Store</a></li>
+                                <?php
+                            }
+                                ?>
                                 <?php
                             if (isset($_SESSION['loggedin']))
                             {

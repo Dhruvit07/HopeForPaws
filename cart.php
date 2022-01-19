@@ -3,7 +3,8 @@ include 'includes/connect.php';
 include 'header.php';
 
 if (!isset($_SESSION['loggedin'])) {
-    header('location: index.php?login?true');
+    echo '<script>window.location.href="index.php?login=true"</script>';
+    exit();
 }
 
 if (!empty($_GET["action"])) {
@@ -27,7 +28,7 @@ if (!empty($_GET["action"])) {
                     'quantity' => $_POST["quantity"],
                     'price' => $productByCode[0]["p_price"],
                     'image' => $productByCode[0]["p_image"],
-                    'descc' => $productByCode[0]["p_description"]
+                    'descc' => $productByCode[0]["p_desc"]
                 ));
 
                 if (!empty($_SESSION["cart_item"])) {
@@ -376,11 +377,11 @@ if (!empty($_GET["action"])) {
                                         class="cart-item-image" /><?php echo $item["name"]; ?></td>
                                 <td><?php echo $item["descc"]; ?></td>
                                 <td style="text-align:right;"><?php echo $item["quantity"]; ?></td>
-                                <td style="text-align:right;"><?php echo "$ " . $item["price"]; ?></td>
-                                <td style="text-align:right;"><?php echo "$ " . number_format($item_price, 2); ?></td>
+                                <td style="text-align:right;"><?php echo "₹ " . $item["price"]; ?></td>
+                                <td style="text-align:right;"><?php echo "₹ " . number_format($item_price, 2); ?></td>
                                 <td style="text-align:center;"><a
                                         href="cart.php?action=remove&id=<?php echo $item["id"]; ?>"
-                                        class="btnRemoveAction"><img src="assets\images\icon-delete.png"
+                                        class="btnRemoveAction"><img src="images\icon-delete.png"
                                             alt="Remove Item" /></a></td>
                             </tr>
                             <?php
@@ -404,22 +405,22 @@ if (!empty($_GET["action"])) {
                         </dl>
                         <dl class="dlist-align">
                             <dt>Discount:</dt>
-                            <dd class="text-right text-danger ml-3">- $0.00</dd>
+                            <dd class="text-right text-danger ml-3">- ₹  0.00</dd>
                         </dl>
                         <dl class="dlist-align">
                             <dt>Fees:</dt>
                             <dd class="text-right text-dark ml-3"><?php $tax = (0.02 * $total_price) + 3;
-                                                                    echo number_format($tax, 2); ?></dd>
+                                                                    echo "₹ " . number_format($tax, 2); ?></dd>
                         </dl>
                         <dl class="dlist-align">
                             <dt>GST:</dt>
                             <dd class="text-right text-dark ml-3"><?php $gst = 0.18 * $tax;
-                                                                    echo number_format($gst, 2); ?></dd>
+                                                                    echo "₹ " . number_format($gst, 2); ?></dd>
                         </dl>
                         <dl class="dlist-align">
                             <dt>Total:</dt>
                             <dd class="text-right text-dark b ml-3">
-                                <strong><?php echo "$ " . number_format($total_price + $tax + $gst, 2); ?></strong>
+                                <strong><?php echo "₹ " . number_format($total_price + $tax + $gst, 2); ?></strong>
                             </dd>
                         </dl>
                         <hr>

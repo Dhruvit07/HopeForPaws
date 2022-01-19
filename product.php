@@ -2,6 +2,10 @@
 <html lang="en">
 <?php
 include 'header.php';
+if (!isset($_SESSION['loggedin'])) {
+    echo '<script>window.location.href="index.php?login=true"</script>';
+    exit();
+}
 ?>
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
