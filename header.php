@@ -19,11 +19,14 @@ session_start();
 
         <style>
 
+/* @import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap'); */
+
 :root {
     --error-color: #dc3545;
     --success-color: #28a745;
     --warning-color: #ffc107;
 }
+
 
 .form {
     padding: 10px 20px;
@@ -88,7 +91,7 @@ session_start();
     text-transform: uppercase;
 }
 
-.btn:hover { 
+.btn:hover {
     background: #0069d9;
     cursor: pointer;
 }
@@ -96,6 +99,7 @@ session_start();
 .btn:focus {
     outline: none;
 }
+
             </style>
     <!-- Custom Theme files -->
     <link href="css/bootstrap.css" type="text/css" rel="stylesheet" media="all">
@@ -192,9 +196,12 @@ session_start();
                         <div class="resp-tabs-container">
                             <div class="tab-1 resp-tab-content" aria-labelledby="tab_item-0">
                                 <div class="agileits-login">
-                                    <form action="auth/login_process.php" method="post">
-                                        <input type="email" class="email" name="email" placeholder="Email" required=""/>
-                                        <input type="password" class="password" name="password" placeholder="Password"
+                                    <form action="auth/login_process.php"   method="post">
+                                    <div class="form-field">    
+                                    <input type="email" class="email"  name="email" placeholder="Email" required=""/>
+                                    <small></small>
+                                </div>   
+                                    <input type="password" class="password" name="password" placeholder="Password"
                                                required=""/>
                                         <div class="wthree-text">
                                             <ul>

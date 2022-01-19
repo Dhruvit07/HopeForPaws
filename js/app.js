@@ -2,8 +2,9 @@ const usernameEl = document.querySelector('#username');
 const emailEl = document.querySelector('#email');
 const passwordEl = document.querySelector('#password');
 const confirmPasswordEl = document.querySelector('#confirm-password');
-const form = document.querySelector('#register');
-
+const phoneEl = document.querySelector('#phone');
+const form = document.querySelector('#signup');
+console.log("1. Inside app.js");
 
 const checkUsername = () => {
 
@@ -20,6 +21,31 @@ const checkUsername = () => {
         showError(usernameEl, `Username must be between ${min} and ${max} characters.`)
     } else {
         showSuccess(usernameEl);
+        valid = true;
+    }
+    return valid;
+};
+
+const checkPhone = () => {
+
+    let valid = false;
+
+    const size = 10;
+
+    const number = phoneEl.value.trim();
+
+    if (!isRequired(number)) {
+        showError(phoneEl, 'Phone Number cannot be blank.');
+    } else if(!isNumValid(number))
+    {
+        showError(phoneEl, `Phone Number must contain Numbers Only and Phone Number must be ${size} character long.`)
+
+    }
+    else if (number.length != size) {
+        showError(phoneEl, `Phone Number must be ${size} character long.`);
+    }  
+     else {
+        showSuccess(phoneEl);
         valid = true;
     }
     return valid;
@@ -86,6 +112,11 @@ const isPasswordSecure = (password) => {
     return re.test(password);
 };
 
+const isNumValid = (number) => {
+    const re = /^\d{10}$/;
+    return re.test(number);
+};
+
 const isRequired = value => value === '' ? false : true;
 const isBetween = (length, min, max) => length < min || length > max ? false : true;
 
@@ -123,22 +154,30 @@ form.addEventListener('submit', function (e) {
     // validate fields
     let isUsernameValid = checkUsername(),
         isEmailValid = checkEmail(),
+        isNumValid = checkPhone(),
         isPasswordValid = checkPassword(),
         isConfirmPasswordValid = checkConfirmPassword();
 
     let isFormValid = isUsernameValid &&
         isEmailValid &&
         isPasswordValid &&
+        isNumValid &&
         isConfirmPasswordValid;
 
     // submit to the server if the form is valid
     if (isFormValid) {
+    console.log("3. Is form valid!");
+    form.submit();        
+
+        
 
     }
 });
 
 
 const debounce = (fn, delay = 500) => {
+    console.log("2. Inside debounce Delay!");
+
     let timeoutId;
     return (...args) => {
         // cancel the previous timer
@@ -153,9 +192,13 @@ const debounce = (fn, delay = 500) => {
 };
 
 form.addEventListener('input', debounce(function (e) {
+    console.log("2. Inside debounce Funciton!");
     switch (e.target.id) {
         case 'username':
             checkUsername();
+            break;
+            case 'phone':
+            checkPhone();
             break;
         case 'email':
             checkEmail();
