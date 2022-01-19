@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 15, 2022 at 07:54 AM
+-- Generation Time: Jan 19, 2022 at 03:39 PM
 -- Server version: 10.4.22-MariaDB
--- PHP Version: 8.1.1
+-- PHP Version: 8.0.14
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -102,6 +102,33 @@ CREATE TABLE `complaint` (
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `orders`
+--
+
+CREATE TABLE `orders` (
+  `order_id` int(5) NOT NULL,
+  `u_id` int(5) NOT NULL,
+  `total` int(7) NOT NULL,
+  `order_time` datetime NOT NULL DEFAULT current_timestamp(),
+  `address` text NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `phone` int(10) NOT NULL,
+  `state` varchar(100) NOT NULL,
+  `city` varchar(100) NOT NULL,
+  `zip` int(10) NOT NULL,
+  `status` int(1) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `orders`
+--
+
+INSERT INTO `orders` (`order_id`, `u_id`, `total`, `order_time`, `address`, `email`, `phone`, `state`, `city`, `zip`, `status`) VALUES
+(1, 1, 208, '2022-01-19 19:48:27', 'c / 6/90 gidc colony, abhishek appartment', '1234@gmail.com', 2147483647, 'Gujarat', 'Vadodara', 390010, 1);
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `payment`
 --
 
@@ -153,11 +180,19 @@ INSERT INTO `pet_category` (`pt_id`, `pt_type_name`) VALUES
 
 CREATE TABLE `product` (
   `p_id` int(5) NOT NULL,
+  `p_name` varchar(100) NOT NULL,
   `cat_id` int(5) NOT NULL,
   `p_desc` varchar(255) NOT NULL,
   `p_price` int(11) NOT NULL,
   `p_image` varchar(256) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `product`
+--
+
+INSERT INTO `product` (`p_id`, `p_name`, `cat_id`, `p_desc`, `p_price`, `p_image`) VALUES
+(1, 'Dhruvit', 1, 'Hello', 100, 'uploads/ab67616d0000b2730d066c94caca4c00f241ac44.jpg');
 
 -- --------------------------------------------------------
 
@@ -168,10 +203,29 @@ CREATE TABLE `product` (
 CREATE TABLE `productorder` (
   `o_id` int(5) NOT NULL,
   `u_id` int(5) NOT NULL,
-  `cart_t` int(11) NOT NULL,
-  `pay_id` int(11) NOT NULL,
-  `o_status` int(5) NOT NULL DEFAULT 0 COMMENT '0 - Ordered\r\n1 - Order Accepted\r\n2 - Order Delivered\r\n3 - Order Cancel'
+  `product_id` int(11) NOT NULL,
+  `p_quantity` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `transaction`
+--
+
+CREATE TABLE `transaction` (
+  `t_id` int(5) NOT NULL,
+  `u_id` int(5) NOT NULL,
+  `order_id` int(5) NOT NULL,
+  `payment_id` varchar(30) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `transaction`
+--
+
+INSERT INTO `transaction` (`t_id`, `u_id`, `order_id`, `payment_id`) VALUES
+(1, 1, 1, 'MOJO2119A05A53414601');
 
 -- --------------------------------------------------------
 
@@ -193,7 +247,7 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`u_id`, `u_name`, `u_phone`, `u_email`, `u_password`, `u_status`) VALUES
-(1, 'Alok Rathava', 4379897419, 'alokrathava@gmail.com', '@S3770k3g', 0);
+(1, 'Alok Rathava', 4379897419, '1234@gmail.com', '1234', 0);
 
 --
 -- Indexes for dumped tables
@@ -230,6 +284,12 @@ ALTER TABLE `complaint`
   ADD PRIMARY KEY (`c_id`);
 
 --
+-- Indexes for table `orders`
+--
+ALTER TABLE `orders`
+  ADD PRIMARY KEY (`order_id`);
+
+--
 -- Indexes for table `payment`
 --
 ALTER TABLE `payment`
@@ -258,6 +318,12 @@ ALTER TABLE `product`
 --
 ALTER TABLE `productorder`
   ADD PRIMARY KEY (`o_id`);
+
+--
+-- Indexes for table `transaction`
+--
+ALTER TABLE `transaction`
+  ADD PRIMARY KEY (`t_id`);
 
 --
 -- Indexes for table `user`
@@ -300,6 +366,12 @@ ALTER TABLE `complaint`
   MODIFY `c_id` int(5) NOT NULL AUTO_INCREMENT;
 
 --
+-- AUTO_INCREMENT for table `orders`
+--
+ALTER TABLE `orders`
+  MODIFY `order_id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
 -- AUTO_INCREMENT for table `payment`
 --
 ALTER TABLE `payment`
@@ -321,13 +393,19 @@ ALTER TABLE `pet_category`
 -- AUTO_INCREMENT for table `product`
 --
 ALTER TABLE `product`
-  MODIFY `p_id` int(5) NOT NULL AUTO_INCREMENT;
+  MODIFY `p_id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `productorder`
 --
 ALTER TABLE `productorder`
   MODIFY `o_id` int(5) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `transaction`
+--
+ALTER TABLE `transaction`
+  MODIFY `t_id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `user`
