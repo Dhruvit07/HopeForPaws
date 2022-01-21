@@ -48,10 +48,10 @@ $a_name = $_SESSION["a_name"];
                         </nav>
                     </div>
                     <div class="sb-sidenav-menu-heading">Add Ons</div>
-                    <!--                    <a class="nav-link" href="complaints.php">-->
-                    <!--                        <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>-->
-                    <!--                        User Complaints-->
-                    <!--                    </a>-->
+                    <a class="nav-link" href="orders.php">
+                        <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
+                        Orders
+                    </a>
                     <a class="nav-link" href="payment.php">
                         <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
                         Payment

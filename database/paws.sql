@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 19, 2022 at 03:39 PM
+-- Generation Time: Jan 21, 2022 at 05:29 AM
 -- Server version: 10.4.22-MariaDB
--- PHP Version: 8.0.14
+-- PHP Version: 8.1.1
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -210,10 +210,10 @@ CREATE TABLE `productorder` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `transaction`
+-- Table structure for table `transfer`
 --
 
-CREATE TABLE `transaction` (
+CREATE TABLE `transfer` (
   `t_id` int(5) NOT NULL,
   `u_id` int(5) NOT NULL,
   `order_id` int(5) NOT NULL,
@@ -221,10 +221,10 @@ CREATE TABLE `transaction` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `transaction`
+-- Dumping data for table `transfer`
 --
 
-INSERT INTO `transaction` (`t_id`, `u_id`, `order_id`, `payment_id`) VALUES
+INSERT INTO `transfer` (`t_id`, `u_id`, `order_id`, `payment_id`) VALUES
 (1, 1, 1, 'MOJO2119A05A53414601');
 
 -- --------------------------------------------------------
@@ -320,9 +320,9 @@ ALTER TABLE `productorder`
   ADD PRIMARY KEY (`o_id`);
 
 --
--- Indexes for table `transaction`
+-- Indexes for table `transfer`
 --
-ALTER TABLE `transaction`
+ALTER TABLE `transfer`
   ADD PRIMARY KEY (`t_id`);
 
 --
@@ -402,9 +402,9 @@ ALTER TABLE `productorder`
   MODIFY `o_id` int(5) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `transaction`
+-- AUTO_INCREMENT for table `transfer`
 --
-ALTER TABLE `transaction`
+ALTER TABLE `transfer`
   MODIFY `t_id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --

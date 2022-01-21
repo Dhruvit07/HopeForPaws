@@ -147,7 +147,7 @@ require 'includes/connect.php';
                                     if ($row['u_status'] == 0) {
                                         echo '<td><a href="psy_action.php/?block=' . $row['u_id'] . '" class="btn btn-danger btn-block">BLOCK</a></td>';
                                     } elseif ($row['u_status'] == 1) {
-                                        echo '<td><a href="psy_action.php/?unblock=' . $row['u_id'] . '" class="btn btn-primary btn-block">UNBLOCK</a></td>';
+                                        echo '<td><a href="psy_action.php/?unblock=' . $row['u_id'] . '" class="btn btn-success btn-block">UNBLOCK</a></td>';
                                     }
                                     echo '</tbody>';
                                 }
