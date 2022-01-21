@@ -69,7 +69,7 @@
                             </tfoot>
                             <?php
                             $c = 1;
-                            $productSQL = "SELECT * FROM `adoption` JOIN pet_category ON pet_category.pt_id = adoption.pt_id JOIN user ON user.u_id = adoption.u_id";
+                            $productSQL = "SELECT * FROM `adoption` JOIN pet_category ON pet_category.pt_id = adoption.pet_id JOIN user ON user.u_id = adoption.u_id";
                             $result = $conn->query($productSQL);
                             if ($result->num_rows > 0) {
                                 while ($row = $result->fetch_assoc()) {

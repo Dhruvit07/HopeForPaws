@@ -6,7 +6,7 @@ if (!isset($_POST['submit'])) {
 $purpose = "Payment";
 $amount = $_POST["price"];
 $name = $_POST["name"];
-$phone = 9825183134;
+$phone = 7265906640;
 $email = $_POST["email"];
 $address = $_POST["address"];
 $city = $_POST["city"];

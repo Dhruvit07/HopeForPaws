@@ -17,90 +17,90 @@ session_start();
             window.scrollTo(0, 1);
         } </script>
 
-        <style>
+    <style>
 
-/* @import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap'); */
+        /* @import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap'); */
 
-:root {
-    --error-color: #dc3545;
-    --success-color: #28a745;
-    --warning-color: #ffc107;
-}
-
-
-.form {
-    padding: 10px 20px;
-}
-
-.form h1 {
-    font-size: 1.5em;
-    text-align: center;
-    margin-bottom: 20px;
-
-}
-
-.form-field {
-    margin-bottom: 5px;
-
-}
-
-.form-field label {
-    display: block;
-    color: #777;
-    margin-bottom: 5px;
-}
-
-.form-field input {
-    border: solid 2px #f0f0f0;
-    border-radius: 3px;
-    padding: 10px;
-    margin-bottom: 5px;
-    font-size: 14px;
-    display: block;
-    width: 100%;
-}
-
-.form-field input:focus {
-    outline: none;
-}
-
-.form-field.error input {
-    border-color: var(--error-color);
-}
-
-.form-field.success input {
-    border-color: var(--success-color);
-}
+        :root {
+            --error-color: #dc3545;
+            --success-color: #28a745;
+            --warning-color: #ffc107;
+        }
 
 
-.form-field small {
-    color: var(--error-color);
-}
+        .form {
+            padding: 10px 20px;
+        }
+
+        .form h1 {
+            font-size: 1.5em;
+            text-align: center;
+            margin-bottom: 20px;
+
+        }
+
+        .form-field {
+            margin-bottom: 5px;
+
+        }
+
+        .form-field label {
+            display: block;
+            color: #777;
+            margin-bottom: 5px;
+        }
+
+        .form-field input {
+            border: solid 2px #f0f0f0;
+            border-radius: 3px;
+            padding: 10px;
+            margin-bottom: 5px;
+            font-size: 14px;
+            display: block;
+            width: 100%;
+        }
+
+        .form-field input:focus {
+            outline: none;
+        }
+
+        .form-field.error input {
+            border-color: var(--error-color);
+        }
+
+        .form-field.success input {
+            border-color: var(--success-color);
+        }
 
 
-/* button */
-.btn {
-    width: 100%;
-    padding: 3%;
-    background: #007bff;
-    border-bottom: 2px solid #007bff;
-    border-top-style: none;
-    border-right-style: none;
-    border-left-style: none;
-    color: #fff;
-    text-transform: uppercase;
-}
+        .form-field small {
+            color: var(--error-color);
+        }
 
-.btn:hover {
-    background: #0069d9;
-    cursor: pointer;
-}
 
-.btn:focus {
-    outline: none;
-}
+        /* button */
+        .btn {
+            width: 100%;
+            padding: 3%;
+            background: #007bff;
+            border-bottom: 2px solid #007bff;
+            border-top-style: none;
+            border-right-style: none;
+            border-left-style: none;
+            color: #fff;
+            text-transform: uppercase;
+        }
 
-            </style>
+        .btn:hover {
+            background: #0069d9;
+            cursor: pointer;
+        }
+
+        .btn:focus {
+            outline: none;
+        }
+
+    </style>
     <!-- Custom Theme files -->
     <link href="css/bootstrap.css" type="text/css" rel="stylesheet" media="all">
     <link href="css/style.css" type="text/css" rel="stylesheet" media="all">
@@ -126,16 +126,14 @@ session_start();
                     <div class="agileits_w3layouts_sign_in">
                         <ul>
                             <?php
-                            if (!isset($_SESSION['loggedin']))
-                            {
+                            if (!isset($_SESSION['loggedin'])) {
                                 ?>
                                 <li><a href="#myModal2" data-toggle="modal" class="play-icon">Login</a></li>
-                            <?php
-                            }
-                            else{
-                            ?>
-                             <li> <a href="logout.php"  class="play-icon">Logout</a></li>  
-                            <?php
+                                <?php
+                            } else {
+                                ?>
+                                <li><a href="logout.php" class="play-icon">Logout</a></li>
+                                <?php
                             }
                             ?>
                             <li>Call us : <span>(1800) 989 7419</span></li>
@@ -166,22 +164,21 @@ session_start();
                                 <!--                                        <li><a href="codes.php" data-hover="Short Codes">Short Codes</a></li>-->
                                 <!--                                    </ul>-->
                                 <!--                                </li>-->
-                               <?php
-                                if (isset($_SESSION['loggedin']))
-                            {
-                                ?>
-                                <li><a href="product.php" data-hover="E-Store">E-Store</a></li>
                                 <?php
-                            }
+                                if (isset($_SESSION['loggedin'])) {
+                                    ?>
+                                    <li><a href="product.php" data-hover="E-Store">E-Store</a></li>
+                                    <li><a href="adoption.php" data-hover="Adoption">Adoption</a></li>
+                                    <?php
+                                }
                                 ?>
                                 <?php
-                            if (isset($_SESSION['loggedin']))
-                            {
+                                if (isset($_SESSION['loggedin'])) {
+                                    ?>
+                                    <li><a href="cart.php" data-hover="Cart">Cart</a></li>
+                                    <?php
+                                }
                                 ?>
-                                <li><a href="cart.php" data-hover="Cart">Cart</a></li>
-                                <?php
-                            }
-                            ?>
                                 <li><a href="contact.php" data-hover="Contact">Contact</a></li>
                             </ul>
                             <div class="clearfix"></div>
@@ -211,12 +208,13 @@ session_start();
                         <div class="resp-tabs-container">
                             <div class="tab-1 resp-tab-content" aria-labelledby="tab_item-0">
                                 <div class="agileits-login">
-                                    <form action="auth/login_process.php"   method="post">
-                                    <div class="form-field">    
-                                    <input type="email" class="email"  name="email" placeholder="Email" required=""/>
-                                    <small></small>
-                                </div>   
-                                    <input type="password" class="password" name="password" placeholder="Password"
+                                    <form action="auth/login_process.php" method="post">
+                                        <div class="form-field">
+                                            <input type="email" class="email" name="email" placeholder="Email"
+                                                   required=""/>
+                                            <small></small>
+                                        </div>
+                                        <input type="password" class="password" name="password" placeholder="Password"
                                                required=""/>
                                         <div class="wthree-text">
                                             <ul>
@@ -239,36 +237,40 @@ session_start();
                             <div class="tab-1 resp-tab-content" aria-labelledby="tab_item-1">
                                 <div class="login-top sign-top">
                                     <div class="agileits-login">
-                                <form action="auth/registration_process.php" id="signup" method="post">
-                                        <div class="form-field">
-                                        <input type="text" name="username" class="username" id="username" placeholder="Full Name*" required="">
-                                        <small></small>
-                        </div>
-                        <div class="form-field">
-                                            <input type="text" class="phone" id="phone" name="phone" placeholder="Phone Number*" 
-                                         required=""/>
-                                        <small></small>
-                        </div>
-                        <div class="form-field">
-                                            <input type="email" class="email" id="email" name="email" placeholder="Email*"
-                                                   required=""/>
-                                                   <small></small>
-                        </div>
-                        <div class="form-field">
-                                            <input type="password" class="password" id="password" name="password"
-                                                   placeholder="Password*" required=""/>
-                                                   <small></small>
-                        </div>
-                        <div class="form-field">
-                        <input type="password" class="confirm-password" id="confirm-password" name="confirm-password"
-                                                   placeholder="Password*" required=""/>
-                <small></small>
-            </div>
-            
+                                        <form action="auth/registration_process.php" id="signup" method="post">
+                                            <div class="form-field">
+                                                <input type="text" name="username" class="username" id="username"
+                                                       placeholder="Full Name*" required="">
+                                                <small></small>
+                                            </div>
+                                            <div class="form-field">
+                                                <input type="text" class="phone" id="phone" name="phone"
+                                                       placeholder="Phone Number*"
+                                                       required=""/>
+                                                <small></small>
+                                            </div>
+                                            <div class="form-field">
+                                                <input type="email" class="email" id="email" name="email"
+                                                       placeholder="Email*"
+                                                       required=""/>
+                                                <small></small>
+                                            </div>
+                                            <div class="form-field">
+                                                <input type="password" class="password" id="password" name="password"
+                                                       placeholder="Password*" required=""/>
+                                                <small></small>
+                                            </div>
+                                            <div class="form-field">
+                                                <input type="password" class="confirm-password" id="confirm-password"
+                                                       name="confirm-password"
+                                                       placeholder="Password*" required=""/>
+                                                <small></small>
+                                            </div>
+
                                             <div class="w3ls-submit">
                                                 <input class="register" id="register" type="submit" value="register">
                                             </div>
-                      
+
                                         </form>
                                     </div>
                                 </div>

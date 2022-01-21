@@ -24,33 +24,38 @@ session_start();
     <!-- web-fonts -->
     <link href="//fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
     <link href="//fonts.googleapis.com/css?family=Dosis:200,300,400,500,600,700,800" rel="stylesheet">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+          integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
     <!-- //web-fonts -->
     <style>
         .fade.in {
-    opacity: 1;
-}
-.alert-primary {
-    color: #31708f;
-    background-color: #d9edf7;
-    border-color: #bce8f1;
-}
-.alert-dismissable, .alert-dismissible {
-    padding-right: 35px;
-}
-.alert {
-    padding: 15px;
-    margin-bottom: 20px;
-    border: 1px solid transparent;
-    border-radius: 4px;
-}
-.fade {
-    opacity: 0;
-    -webkit-transition: opacity .15s linear;
-    -o-transition: opacity .15s linear;
-    transition: opacity .15s linear;
-}
-        </style>
+            opacity: 1;
+        }
+
+        .alert-primary {
+            color: #31708f;
+            background-color: #d9edf7;
+            border-color: #bce8f1;
+        }
+
+        .alert-dismissable, .alert-dismissible {
+            padding-right: 35px;
+        }
+
+        .alert {
+            padding: 15px;
+            margin-bottom: 20px;
+            border: 1px solid transparent;
+            border-radius: 4px;
+        }
+
+        .fade {
+            opacity: 0;
+            -webkit-transition: opacity .15s linear;
+            -o-transition: opacity .15s linear;
+            transition: opacity .15s linear;
+        }
+    </style>
 </head>
 <body>
 <!-- banner -->
@@ -65,17 +70,15 @@ session_start();
                     </div>
                     <div class="agileits_w3layouts_sign_in">
                         <ul>
-                        <?php
-                            if (!isset($_SESSION['loggedin']))
-                            {
+                            <?php
+                            if (!isset($_SESSION['loggedin'])) {
                                 ?>
                                 <li><a href="#myModal2" data-toggle="modal" class="play-icon">Login</a></li>
-                            <?php
-                            }
-                            else{
-                            ?>
-                             <li> <a href="logout.php"  class="play-icon">Logout</a></li>  
-                            <?php
+                                <?php
+                            } else {
+                                ?>
+                                <li><a href="logout.php" class="play-icon">Logout</a></li>
+                                <?php
                             }
                             ?>
                             <li>Call us : <span>(1800) 989 7419</span></li>
@@ -96,14 +99,14 @@ session_start();
                         </div>
                         <!-- top-nav -->
                         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                        <?php
-                        if (isset($_GET['login'])){
-                            echo '
+                            <?php
+                            if (isset($_GET['login'])) {
+                                echo '
                                 <div class="alert alert-primary" style="margin:15px">
                                 You Must be Logged in to use this Feature. 
                                 </div>';
-    
-                        }
+
+                            }
 
                             if (isset($_GET['exist']) && $_GET['exist'] == true) {
 
@@ -126,15 +129,15 @@ session_start();
                                 <!--                                        <li><a href="codes.php" data-hover="Short Codes">Short Codes</a></li>-->
                                 <!--                                    </ul>-->
                                 </li>
-                              <?php
-                                if (isset($_SESSION['loggedin']))
-                            {
-                                ?>
-                                <li><a href="product.php" data-hover="E-Store">E-Store</a></li>
-                                <li><a href="cart.php" data-hover="Cart">Cart</a></li>
-
                                 <?php
-                            }
+                                if (isset($_SESSION['loggedin'])) {
+                                    ?>
+                                    <li><a href="product.php" data-hover="E-Store">E-Store</a></li>
+                                    <li><a href="adoption.php" data-hover="Adoption">Adoption</a></li>
+                                    <li><a href="cart.php" data-hover="Cart">Cart</a></li>
+
+                                    <?php
+                                }
                                 ?>
                                 <li><a href="contact.php" data-hover="Contact">Contact</a></li>
                             </ul>
@@ -146,11 +149,11 @@ session_start();
         </div>
         <!-- //header -->
         <!-- banner-text -->
-        
+
         <div class="banner-text agileinfo">
-      
+
             <div class="container">
-            
+
                 <div class="agile_banner_info">
                     <div class="agile_banner_info1">
                         <h6>What we offer?</h6>
@@ -315,12 +318,13 @@ include 'footer.php';
                         <div class="resp-tabs-container">
                             <div class="tab-1 resp-tab-content" aria-labelledby="tab_item-0">
                                 <div class="agileits-login">
-                                    <form action="auth/login_process.php"  method="post">
-                                    <div class="form-field">    
-                                    <input type="email" class="email"  name="email" placeholder="Email" required=""/>
-                                    <small></small>
-                                </div>   
-                                    <input type="password" class="password" name="password" placeholder="Password"
+                                    <form action="auth/login_process.php" method="post">
+                                        <div class="form-field">
+                                            <input type="email" class="email" name="email" placeholder="Email"
+                                                   required=""/>
+                                            <small></small>
+                                        </div>
+                                        <input type="password" class="password" name="password" placeholder="Password"
                                                required=""/>
                                         <div class="wthree-text">
                                             <ul>
@@ -343,159 +347,164 @@ include 'footer.php';
                             <div class="tab-1 resp-tab-content" aria-labelledby="tab_item-1">
                                 <div class="login-top sign-top">
                                     <div class="agileits-login">
-                                <form action="auth/registration_process.php" id="signup" method="post">
-                                        <div class="form-field">
-                                        <input type="text" name="username" class="username" id="username" placeholder="Full Name*" required="">
-                                        <small></small>
-                            </div>
-                        <div class="form-field">
-                                            <input type="text" class="phone" id="phone" name="phone" placeholder="Phone Number*" 
-                                         required=""/>
-                                        <small></small>
-                        </div>
-                        <div class="form-field">
-                                            <input type="email" class="email" id="email" name="email" placeholder="Email*"
-                                                   required=""/>
-                                                   <small></small>
-                        </div>
-                        <div class="form-field">
-                                            <input type="password" class="password" id="password" name="password"
-                                                   placeholder="Password*" required=""/>
-                                                   <small></small>
-                        </div>
-                        <div class="form-field">
-                        <input type="password" class="confirm-password" id="confirm-password" name="confirm-password"
-                                                   placeholder="Password*" required=""/>
-                <small></small>
-            </div>
-            
+                                        <form action="auth/registration_process.php" id="signup" method="post">
+                                            <div class="form-field">
+                                                <input type="text" name="username" class="username" id="username"
+                                                       placeholder="Full Name*" required="">
+                                                <small></small>
+                                            </div>
+                                            <div class="form-field">
+                                                <input type="text" class="phone" id="phone" name="phone"
+                                                       placeholder="Phone Number*"
+                                                       required=""/>
+                                                <small></small>
+                                            </div>
+                                            <div class="form-field">
+                                                <input type="email" class="email" id="email" name="email"
+                                                       placeholder="Email*"
+                                                       required=""/>
+                                                <small></small>
+                                            </div>
+                                            <div class="form-field">
+                                                <input type="password" class="password" id="password" name="password"
+                                                       placeholder="Password*" required=""/>
+                                                <small></small>
+                                            </div>
+                                            <div class="form-field">
+                                                <input type="password" class="confirm-password" id="confirm-password"
+                                                       name="confirm-password"
+                                                       placeholder="Password*" required=""/>
+                                                <small></small>
+                                            </div>
+
                                             <div class="w3ls-submit">
                                                 <input class="register" id="register" type="submit" value="register">
                                             </div>
-                      
+
                                         </form>
-                             </div>
-                         </div>
-                     </div>
-                 </div>
-             </div>
-             <div class="clearfix"></div>
-         </div>
-     </div> --> <!-- //login-page -->
-<!--    </div>
-</div>
-</div>
-<!-- //modal sign in -->
-<!-- js -->
-<script src="js/jquery-2.2.3.min.js"></script>
-<!-- //js -->
-<!-- jarallax -->
-<script src="js/SmoothScroll.min.js"></script>
-<script src="js/jarallax.js"></script>
-<script type="text/javascript">
-    /* init Jarallax */
-    $('.jarallax').jarallax({
-        speed: 0.5,
-        imgWidth: 1366,
-        imgHeight: 768
-    })
-</script>
-<!-- //jarallax -->
-<!-- ResponsiveTabs js -->
-<script src="js/easyResponsiveTabs.js" type="text/javascript"></script>
-<script type="text/javascript">
-    $(document).ready(function () {
-        $('#horizontalTab').easyResponsiveTabs({
-            type: 'default', //Types: default, vertical, accordion
-            width: 'auto', //auto or any width like 600px
-            fit: true   // 100% fit in a container
-        });
-    });
-</script>
-<!-- //ResponsiveTabs js -->
-<!-- banner-type-text -->
-<script src="js/typed.js" type="text/javascript"></script>
-<script>
-    $(function () {
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+            --> <!-- //login-page -->
+            <!--    </div>
+            </div>
+            </div>
+            <!-- //modal sign in -->
+            <!-- js -->
+            <script src="js/jquery-2.2.3.min.js"></script>
+            <!-- //js -->
+            <!-- jarallax -->
+            <script src="js/SmoothScroll.min.js"></script>
+            <script src="js/jarallax.js"></script>
+            <script type="text/javascript">
+                /* init Jarallax */
+                $('.jarallax').jarallax({
+                    speed: 0.5,
+                    imgWidth: 1366,
+                    imgHeight: 768
+                })
+            </script>
+            <!-- //jarallax -->
+            <!-- ResponsiveTabs js -->
+            <script src="js/easyResponsiveTabs.js" type="text/javascript"></script>
+            <script type="text/javascript">
+                $(document).ready(function () {
+                    $('#horizontalTab').easyResponsiveTabs({
+                        type: 'default', //Types: default, vertical, accordion
+                        width: 'auto', //auto or any width like 600px
+                        fit: true   // 100% fit in a container
+                    });
+                });
+            </script>
+            <!-- //ResponsiveTabs js -->
+            <!-- banner-type-text -->
+            <script src="js/typed.js" type="text/javascript"></script>
+            <script>
+                $(function () {
 
-        $("#typed").typed({
-            // strings: ["Typed.js is a <strong>jQuery</strong> plugin.", "It <em>types</em> out sentences.", "And then deletes them.", "Try it out!"],
-            stringsElement: $('#typed-strings'),
-            typeSpeed: 30,
-            backDelay: 700,
-            loop: true,
-            contentType: 'html', // or text
-            // defaults to false for infinite loop
-            loopCount: false,
-            callback: function () {
-                foo();
-            },
-            resetCallback: function () {
-                newTyped();
-            }
-        });
+                    $("#typed").typed({
+                        // strings: ["Typed.js is a <strong>jQuery</strong> plugin.", "It <em>types</em> out sentences.", "And then deletes them.", "Try it out!"],
+                        stringsElement: $('#typed-strings'),
+                        typeSpeed: 30,
+                        backDelay: 700,
+                        loop: true,
+                        contentType: 'html', // or text
+                        // defaults to false for infinite loop
+                        loopCount: false,
+                        callback: function () {
+                            foo();
+                        },
+                        resetCallback: function () {
+                            newTyped();
+                        }
+                    });
 
-        $(".reset").click(function () {
-            $("#typed").typed('reset');
-        });
+                    $(".reset").click(function () {
+                        $("#typed").typed('reset');
+                    });
 
-    });
+                });
 
-    function newTyped() { /* A new typed object */
-    }
+                function newTyped() { /* A new typed object */
+                }
 
-    function foo() {
-        console.log("Callback");
-    }
-</script>
-<!-- //banner-type-text -->
-<!-- flexSlider -->
-<script defer src="js/jquery.flexslider.js"></script>
-<script type="text/javascript">
-    $(window).load(function () {
-        $('.flexslider').flexslider({
-            animation: "slide",
-            start: function (slider) {
-                $('body').removeClass('loading');
-            }
-        });
-    });
-</script>
-<!-- //flexSlider -->
-<!-- start-smooth-scrolling -->
-<script type="text/javascript" src="js/move-top.js"></script>
-<script type="text/javascript" src="js/easing.js"></script>
-<script type="text/javascript">
-    jQuery(document).ready(function ($) {
-        $(".scroll").click(function (event) {
-            event.preventDefault();
+                function foo() {
+                    console.log("Callback");
+                }
+            </script>
+            <!-- //banner-type-text -->
+            <!-- flexSlider -->
+            <script defer src="js/jquery.flexslider.js"></script>
+            <script type="text/javascript">
+                $(window).load(function () {
+                    $('.flexslider').flexslider({
+                        animation: "slide",
+                        start: function (slider) {
+                            $('body').removeClass('loading');
+                        }
+                    });
+                });
+            </script>
+            <!-- //flexSlider -->
+            <!-- start-smooth-scrolling -->
+            <script type="text/javascript" src="js/move-top.js"></script>
+            <script type="text/javascript" src="js/easing.js"></script>
+            <script type="text/javascript">
+                jQuery(document).ready(function ($) {
+                    $(".scroll").click(function (event) {
+                        event.preventDefault();
 
-            $('html,body').animate({scrollTop: $(this.hash).offset().top}, 1000);
-        });
-    });
-</script>
-<!-- //end-smooth-scrolling -->
-<!-- smooth-scrolling-of-move-up -->
-<script type="text/javascript">
-    $(document).ready(function () {
-        /*
-        var defaults = {
-            containerID: 'toTop', // fading element id
-            containerHoverID: 'toTopHover', // fading element hover id
-            scrollSpeed: 1200,
-            easingType: 'linear'
-        };
-        */
+                        $('html,body').animate({scrollTop: $(this.hash).offset().top}, 1000);
+                    });
+                });
+            </script>
+            <!-- //end-smooth-scrolling -->
+            <!-- smooth-scrolling-of-move-up -->
+            <script type="text/javascript">
+                $(document).ready(function () {
+                    /*
+                    var defaults = {
+                        containerID: 'toTop', // fading element id
+                        containerHoverID: 'toTopHover', // fading element hover id
+                        scrollSpeed: 1200,
+                        easingType: 'linear'
+                    };
+                    */
 
-        $().UItoTop({easingType: 'easeOutQuart'});
+                    $().UItoTop({easingType: 'easeOutQuart'});
 
-    });
-</script>
-<!-- //smooth-scrolling-of-move-up -->
-<!-- Bootstrap core JavaScript
-================================================== -->
-<!-- Placed at the end of the document so the pages load faster -->
-<script src="js/bootstrap.js"></script>
+                });
+            </script>
+            <!-- //smooth-scrolling-of-move-up -->
+            <!-- Bootstrap core JavaScript
+            ================================================== -->
+            <!-- Placed at the end of the document so the pages load faster -->
+            <script src="js/bootstrap.js"></script>
 
 </body>
 </html>

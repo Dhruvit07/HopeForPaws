@@ -53,7 +53,8 @@
                                 <th>Users</th>
                                 <th>Transaction ID</th>
                                 <th>Amount</th>
-                                <th>Date</th>
+                                <th>Email</th>
+                                <th>Phone</th>
                             </tr>
                             </thead>
                             <tfoot>
@@ -62,12 +63,14 @@
                                 <th>Users</th>
                                 <th>Transaction ID</th>
                                 <th>Amount</th>
-                                <th>Date</th>
+                                <th>Email</th>
+                                <th>Phone</th>
                             </tr>
                             </tfoot>
                             <?php
                             $c = 1;
-                            $productSQL = "SELECT payment.pay_id, payment.transaction_id, payment.amount, payment.timestamp, user.u_name FROM `payment` JOIN user ON user.u_id = payment.u_id";
+                            $productSQL = "SELECT user.u_name, transfer.payment_id, orders.order_id, orders.total, user.u_email, user.u_phone FROM `transfer` 
+                                           JOIN orders ON orders.order_id = transfer.u_id JOIN user ON user.u_id = transfer.u_id;";
                             $result = $conn->query($productSQL);
                             if ($result->num_rows > 0) {
                                 while ($row = $result->fetch_assoc()) {
@@ -76,19 +79,11 @@
                                     echo '</tr>';
                                     echo '<td>' . $c++ . '</td>';
                                     echo '<td>' . $row["u_name"] . '</td>';
-                                    echo '<td>' . $row["transaction_id"] . '</td>';
-                                    echo '<td>' . $row["amount"] . '</td>';
-                                    echo '<td>' . $row["timestamp"] . '</td>';
-//                                    if ($row['status'] == 0) {
-//                                        echo '<td>';
-//                                        echo '<a href="adoptionProcess.php/?accept=' . $row["ad_id"] . '" class="btn btn-success btn-block">Accept Application</a><br>';
-//                                        echo '<a href="adoptionProcess.php/?reject=' . $row["ad_id"] . '" class="btn btn-danger btn-block">Reject Application</a>';
-//                                        echo '</td>';
-//                                    } else if ($row['status'] == 1) {
-//                                        echo '<td><p class="text-success">Accepted</p></td>';
-//                                    } else {
-//                                        echo '<td><p class="text-danger">Rejected</p></td>';
-//                                    }
+                                    echo '<td>' . $row["payment_id"] . '</td>';
+                                    echo '<td>₹' . $row["total"] . '</td>';
+                                    echo '<td>' . $row["u_email"] . '</td>';
+                                    echo '<td>' . $row["u_phone"] . '</td>';
+
                                     echo '</tbody>';
                                 }
                             }
