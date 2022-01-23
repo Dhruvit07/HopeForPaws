@@ -54,12 +54,12 @@ require 'includes/connect.php';
                             <div class="card-footer d-flex align-items-center justify-content-between">
                                 <a class="small text-white stretched-link" href="#">
                                     <?php
-                                    $product = "SELECT * FROM `productorder`";
+                                    $product = "SELECT * FROM `orders`";
                                     $result_product = mysqli_query($conn, $product);
                                     if ($result_product) {
-                                        $row = mysqli_num_rows($result_product);
-                                        if ($row) {
-                                            echo $row;
+                                        $productRow = mysqli_num_rows($result_product);
+                                        if ($productRow) {
+                                            echo $productRow;
                                         }
                                     }
                                     ?>
@@ -94,12 +94,12 @@ require 'includes/connect.php';
                             <div class="card-footer d-flex align-items-center justify-content-between">
                                 <a class="small text-white stretched-link" href="#">
                                     <?php
-                                    $payment = "SELECT * FROM `payment`";
+                                    $payment = "SELECT * FROM `transfer`";
                                     $result_payment = mysqli_query($conn, $payment);
                                     if ($result_payment) {
-                                        $row = mysqli_num_rows($result_payment);
-                                        if ($row) {
-                                            echo $row;
+                                        $paymentRow = mysqli_num_rows($result_payment);
+                                        if ($paymentRow) {
+                                            echo $paymentRow;
                                         }
                                     }
                                     ?>
