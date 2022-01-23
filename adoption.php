@@ -1,3 +1,8 @@
+<?php
+
+require 'includes/connect.php';
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -31,16 +36,26 @@ include 'header.php';
 <!-- contact -->
 <div class="contact">
     <div class="container">
-        <h3 class="agileits-title w3title2">Adopt with us</h3>
-        <form action="#" method="post">
+        <h3 class="agileits-title w3title2" style="text-align:left;">Adoption Simplifed</h3>
+        <form action="adoptionProcess.php" method="post">
             <div class="col-sm-6 contact-left">
-                <input type="text" name="Name" placeholder="Your Name" required="">
-                <input type="email" name="Email" placeholder="Email" required="">
-                <input type="text" name="Mobile Number" placeholder="Mobile Number" required="">
-            </div>
-            <div class="col-sm-6 contact-right">
-                <textarea name="Message" placeholder="Message" required=""></textarea>
-                <input type="submit" value="Submit">
+                <label for="Pet Adoption" class="form-label" style="text-decoration: #dd4b39">Select Pet
+                    Categories</label><br>
+                <select class="form-select" name="pet" style="width: 350px; height: 40px;margin-top: 05px;">
+                    <?php
+                    $petListSQL = "SELECT * FROM `pet_category`";
+                    $r1 = $conn->query($petListSQL);
+                    if ($r1->num_rows > 0) {
+                        echo '<option value="">Select Animal Type</option>';
+                        while ($ro1 = $r1->fetch_assoc()) {
+                            echo '<option value="' . $ro1['pt_id'] . '">' . $ro1['pt_type_name'] . '</option>';
+                        }
+                    }
+                    ?>
+                </select>
+                <button type="submit" class="btn btn-success" style="width: 350px;margin-top: 10px;">Request For
+                    Adoption
+                </button>
             </div>
             <div class="clearfix"></div>
         </form>

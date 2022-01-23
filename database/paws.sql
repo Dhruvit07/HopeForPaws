@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 21, 2022 at 05:29 AM
+-- Generation Time: Jan 24, 2022 at 12:31 AM
 -- Server version: 10.4.22-MariaDB
 -- PHP Version: 8.1.1
 
@@ -51,8 +51,17 @@ CREATE TABLE `adoption` (
   `ad_id` int(5) NOT NULL,
   `pet_id` int(5) NOT NULL,
   `u_id` int(10) NOT NULL,
-  `timestamp` timestamp NOT NULL DEFAULT current_timestamp()
+  `timestamp` timestamp NOT NULL DEFAULT current_timestamp(),
+  `status` int(5) NOT NULL DEFAULT 0 COMMENT '0 - Applied\r\n1 - Accepted\r\n2 - Decline'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `adoption`
+--
+
+INSERT INTO `adoption` (`ad_id`, `pet_id`, `u_id`, `timestamp`, `status`) VALUES
+(1, 1, 1, '2022-01-23 23:03:59', 0),
+(2, 1, 1, '2022-01-23 23:29:09', 0);
 
 -- --------------------------------------------------------
 
@@ -345,7 +354,7 @@ ALTER TABLE `admin`
 -- AUTO_INCREMENT for table `adoption`
 --
 ALTER TABLE `adoption`
-  MODIFY `ad_id` int(5) NOT NULL AUTO_INCREMENT;
+  MODIFY `ad_id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `cart`
