@@ -9,7 +9,7 @@ $productDescription = $_POST['desc'];
 
 
 /*File Upload*/
-$target_dir = "uploads/";
+$target_dir = "../uploads/";
 $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
 $uploadOk = 1;
 $imageFileType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
@@ -60,6 +60,7 @@ if ($uploadOk == 0) {
 /*Insert product to Database*/
 
 $productSQL = "INSERT INTO `product`(`p_name`,`cat_id`, `p_desc`, `p_price`, `p_image`) VALUES ('$productName','$productCategories','$productDescription','$productPrice','$target_file')";
+//echo $productSQL;
 $result = $conn->query($productSQL);
 
 if ($result) {
