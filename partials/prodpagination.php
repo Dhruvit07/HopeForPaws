@@ -3,7 +3,7 @@ require '../includes/connect.php';
 session_start();
 
 $discount = array(15, 10,20,25);
-$coupon = array("#DHRUVIT","#MONDAI","#FUCKYOU","#FUCKEVERYONE");
+$coupon = array("#DHRUVIT","#MONDAI","#FUCKYOU","#FUCKEVERYONE","#FUCKEVERYONE");
 $rating = array(5.0,1.0,2.0,2.5,4.0,4.2,3.3,4.3);
 
 $limit_per_page = 9;
