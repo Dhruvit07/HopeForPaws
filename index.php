@@ -123,7 +123,7 @@ session_start();
 
 
                             if (isset($_GET['error']) && isset($_SESSION['error'])) {
-                                echo ' <div class="alert alert-primary"  style="margin-top:10px"> ' . $_SESSION['error'] . ' </div>';
+                                echo ' <div class="alert alert-danger"  style="margin-top:10px"> ' . $_SESSION['error'] . ' </div>';
                                 unset($_SESSION['error']);
                             }
                             ?>

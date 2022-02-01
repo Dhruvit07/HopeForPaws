@@ -1,5 +1,5 @@
 <?php
-    require 'includes/connect.php';
+require 'includes/connect.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -73,21 +73,28 @@ $uid = $_SESSION['u_id'];
 $userInformationSql = "SELECT * FROM `user` WHERE u_id='$uid'";
 $result = $conn->query($userInformationSql);
 
-if ($result->num_rows>0){
-    while ($row = $result->fetch_assoc()){?>
+if ($result->num_rows > 0) {
+    while ($row = $result->fetch_assoc()) {
+        ?>
         <!-- User Info -->
         <div style="text-align: center;">
-            <div class="card" style="margin-top: 54px;border: 2px solid black;">
+            <div class="card" style="margin-top: 54px;border: 2px solid black;padding: 50px;">
                 <h1><?php echo $row['u_name']; ?></h1>
                 <h4 style="margin-top: 15px;"><?php echo $row['u_phone']; ?></h4>
-                <h4 style="margin-top: 15px;"><?php echo $row['u_email']; ?></h4>
+                <h4 style="margin-top: 05px;"><?php echo $row['u_email']; ?></h4>
                 <?php
-                    if ($row['u_status' == 1]){?>
-
-                    <?php }else{ ?>
-
-                <?php
-                    }
+                if ($row['u_status'] == 0) {
+                    ?>
+                    <button class="btn btn-success btn-block btn-lg" style="margin-top: 70px; margin-bottom: -30px">Active</button>
+                <?php } else { ?>
+                    <button class="btn btn-danger btn-block btn-lg" style="margin-top: 70px; margin-bottom: -30px">InActive</button>
+                    <script>
+                        var timer = setTimeout(function() {
+                            window.location='logout.php'
+                        }, 1500);
+                    </script>
+                    <?php
+                }
                 ?>
             </div>
         </div>
