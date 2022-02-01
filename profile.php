@@ -1,3 +1,6 @@
+<?php
+    require 'includes/connect.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,30 +18,82 @@
     <!-- Custom Theme files -->
     <link href="css/bootstrap.css" type="text/css" rel="stylesheet" media="all">
     <link href="css/style.css" type="text/css" rel="stylesheet" media="all">
-    <link href="css/font-awesome.css" rel="stylesheet"> <!-- font-awesome icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="css/font-awesome.css" rel="stylesheet">
+    <!-- font-awesome icons -->
     <!-- //Custom Theme files -->
     <!-- web-fonts -->
     <link href="//fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
     <link href="//fonts.googleapis.com/css?family=Dosis:200,300,400,500,600,700,800" rel="stylesheet">
     <!-- //web-fonts -->
+    <style>
+        .card {
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            max-width: 300px;
+            margin: auto;
+            text-align: center;
+        }
+
+        .title {
+            color: grey;
+            font-size: 18px;
+        }
+
+        button {
+            border: none;
+            outline: 0;
+            display: inline-block;
+            padding: 8px;
+            color: white;
+            background-color: #000;
+            text-align: center;
+            cursor: pointer;
+            width: 100%;
+            font-size: 18px;
+        }
+
+        a {
+            text-decoration: none;
+            font-size: 22px;
+            color: black;
+        }
+
+        button:hover, a:hover {
+            opacity: 0.7;
+        }
+    </style>
 </head>
 <body>
 <!-- banner -->
 <?php
 include 'header.php';
+
+$uid = $_SESSION['u_id'];
+
+$userInformationSql = "SELECT * FROM `user` WHERE u_id='$uid'";
+$result = $conn->query($userInformationSql);
+
+if ($result->num_rows>0){
+    while ($row = $result->fetch_assoc()){?>
+        <!-- User Info -->
+        <div style="text-align: center;">
+            <div class="card" style="margin-top: 54px;border: 2px solid black;">
+                <h1><?php echo $row['u_name']; ?></h1>
+                <h4 style="margin-top: 15px;"><?php echo $row['u_phone']; ?></h4>
+                <h4 style="margin-top: 15px;"><?php echo $row['u_email']; ?></h4>
+                <?php
+                    if ($row['u_status' == 1]){?>
+
+                    <?php }else{ ?>
+
+                <?php
+                    }
+                ?>
+            </div>
+        </div>
+    <?php }
+}
 ?>
-<!-- User Info -->
-
-
-    <div class=""
-
-    </div>
-
-
-
-
-
-
 <!-- //contact -->
 <?php
 include 'footer.php';
