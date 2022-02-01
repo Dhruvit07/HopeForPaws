@@ -77,7 +77,15 @@ session_start();
                                 <?php
                             } else {
                                 ?>
-                                <li><a href="logout.php" class="play-icon">Logout</a></li>
+                                <div class="dropdown">
+                                    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown"><?php echo $_SESSION['u_name']; ?>
+                                        <span class="caret"></span></button>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="profile.php">Profile</a></li>
+                                        <li><a href="transactionHistory.php">History</a></li>
+                                        <li><a href="logout.php">Logout</a></li>
+                                    </ul>
+                                </div>
                                 <?php
                             }
                             ?>
