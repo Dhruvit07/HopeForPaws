@@ -64,7 +64,7 @@ $o_id = mysqli_insert_id($conn);
 foreach ($_SESSION["cart_item"] as $item) {
     $p_id = $item['id'];
     $p_quantity = $item['quantity'];
-    $sql = "INSERT INTO `productorder` (`o_id`, u_id, `product_id`, `p_quantity`) VALUES ('$o_id', '$id','$p_id', '$p_quantity');";
+    $sql = "INSERT INTO `productorder` (u_id, `product_id`, `p_quantity`) VALUES ('$id','$p_id', '$p_quantity');";
     $result = mysqli_query($conn, $sql);
 }
 $psql = "INSERT INTO `transaction` ( `u_id`, `order_id`, `payment_id`) VALUES  ('$id', '$o_id', '$payid');";
@@ -209,6 +209,16 @@ h1 {
                 <p>you should receive a confirmation email soon. </p>
                 <button class="go-home">
                     <a href="product.php">Continue Shopping</a>
+                    <?php
+                    echo "<script>
+                        let redirect_Page = () => {
+                            let tID = setTimeout(function () {
+                                window.location.href = \"product.php\";
+                                window.clearTimeout(tID);		// clear time out.
+                            }, 5000);
+                        }
+                        </script>";
+                    ?>
                 </button>
             </div>
 

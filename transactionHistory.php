@@ -37,41 +37,37 @@ include 'header.php';
 </div>
 
 <div class="container">
-<table class="table" style="float: left; border: 1px solid black; margin-top: 25px;">
-    <thead class="thead-dark">
-    <tr>
-        <th scope="col">#</th>
-        <th scope="col">Name</th>
-        <th scope="col">Transaction ID</th>
-        <th scope="col">Amount</th>
-        <th scope="col">Date</th>
-    </tr>
-    </thead>
-    <?php
-    $uid = $_SESSION['u_id'];
-    $counter = 0;
-    $transactionSql = "SELECT user.u_name, transfer.payment_id, orders.total, orders.order_time FROM `transfer`
-         JOIN user ON user.u_id = transfer.t_id JOIN orders ON orders.order_id = transfer.order_id 
-         WHERE transfer.u_id='$uid'";
+    <table class="table" style="float: left; border: 1px solid black; margin-top: 25px;">
+        <thead class="thead-dark">
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Transaction ID</th>
+            <th scope="col">Amount</th>
+            <th scope="col">Date</th>
+        </tr>
+        </thead>
+        <?php
+        $uid = $_SESSION['u_id'];
+        $counter = 0;
+        $transactionSql = "SELECT * FROM `transfer` JOIN orders ON orders.order_id = transfer.order_id WHERE transfer.u_id = '$uid'";
 
         $result = $conn->query($transactionSql);
 
-        if ($result->num_rows>0){
-            while ($row = $result->fetch_assoc()){
+        if ($result->num_rows > 0) {
+            while ($row = $result->fetch_assoc()) {
                 echo '<tbody>';
                 echo '<tr>';
                 echo '</tr>';
                 echo '<td>' . ++$counter . '</td>';
-                echo '<td>' . $row["u_name"] . '</td>';
                 echo '<td>' . $row["payment_id"] . '</td>';
                 echo '<td>' . $row["total"] . '</td>';
                 echo '<td>' . $row["order_time"] . '</td>';
                 echo '</tbody>';
             }
         }
-//        echo $transactionSql;
-    ?>
-</table>
+        //        echo $transactionSql;
+        ?>
+    </table>
 </div>
 <!-- //contact -->
 <?php
