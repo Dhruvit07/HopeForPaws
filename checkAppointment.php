@@ -1,5 +1,5 @@
 <?php
-require 'includes/connect.php';
+include "includes/connect.php";
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -18,93 +18,65 @@ require 'includes/connect.php';
     <!-- Custom Theme files -->
     <link href="css/bootstrap.css" type="text/css" rel="stylesheet" media="all">
     <link href="css/style.css" type="text/css" rel="stylesheet" media="all">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link href="css/font-awesome.css" rel="stylesheet">
-    <!-- font-awesome icons -->
+    <link href="css/font-awesome.css" rel="stylesheet"> <!-- font-awesome icons -->
     <!-- //Custom Theme files -->
     <!-- web-fonts -->
     <link href="//fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
     <link href="//fonts.googleapis.com/css?family=Dosis:200,300,400,500,600,700,800" rel="stylesheet">
     <!-- //web-fonts -->
-    <style>
-        .card {
-            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-            max-width: 300px;
-            margin: auto;
-            text-align: center;
-        }
-
-        .title {
-            color: grey;
-            font-size: 18px;
-        }
-
-        button {
-            border: none;
-            outline: 0;
-            display: inline-block;
-            padding: 8px;
-            color: white;
-            background-color: #000;
-            text-align: center;
-            cursor: pointer;
-            width: 100%;
-            font-size: 18px;
-        }
-
-        a {
-            text-decoration: none;
-            font-size: 22px;
-            color: black;
-        }
-
-        button:hover, a:hover {
-            opacity: 0.7;
-        }
-    </style>
 </head>
 <body>
 <!-- banner -->
 <?php
 include 'header.php';
-
-$uid = $_SESSION['u_id'];
-
-$userInformationSql = "SELECT * FROM `user` WHERE u_id='$uid'";
-$result = $conn->query($userInformationSql);
-
-if ($result->num_rows > 0) {
-    while ($row = $result->fetch_assoc()) {
-        ?>
-        <!-- User Info -->
-        <div style="text-align: center;">
-            <div class="card" style="margin-top: 54px;border: 2px solid black;padding: 50px;">
-                <h1><?php echo $row['u_name']; ?></h1>
-                <h4 style="margin-top: 15px;"><?php echo $row['u_phone']; ?></h4>
-                <h4 style="margin-top: 05px;"><?php echo $row['u_email']; ?></h4>
-                <?php
-                if ($row['u_status'] == 0) {
-                    ?>
-                    <button class="btn btn-success btn-block btn-lg" style="margin-top: 70px; margin-bottom: -30px">Active</button>
-                <?php } else { ?>
-                    <button class="btn btn-danger btn-block btn-lg" style="margin-top: 70px; margin-bottom: -30px">InActive</button>
-                    <script>
-                        var timer = setTimeout(function() {
-                            window.location='logout.php'
-                        }, 1500);
-                    </script>
-                    <?php
-                }
-                ?>
-                <div style="margin-top: 55px;">
-                <a href="checkAppointment.php" class="btn btn-secondary btn-block btn-lg">Appointments</a>
-                <a href="checkAdoptions.php" class="btn btn-info btn-block btn-lg">Adoptions</a>
-                </div>
-            </div>
-        </div>
-    <?php }
-}
 ?>
+<!-- User Info -->
+
+<div style="text-align: center; margin-top: 55px;">
+    <h2>Appointments History</span></h2>
+</div>
+
+<div class="container">
+    <table class="table" style="float: left; border: 1px solid black; margin-top: 25px;">
+        <thead class="thead-dark">
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Date</th>
+            <th scope="col">Time</th>
+            <th scope="col">Message</th>
+            <th scope="col">Status</th>
+        </tr>
+        </thead>
+        <?php
+        $uid = $_SESSION['u_id'];
+        $counter = 0;
+        $transactionSql = "SELECT * FROM `appointment` WHERE u_id = '$uid'";
+
+        $result = $conn->query($transactionSql);
+
+        if ($result->num_rows > 0) {
+            while ($row = $result->fetch_assoc()) {
+                echo '<tbody>';
+                echo '<tr>';
+                echo '<td>' . ++$counter . '</td>';
+                echo '<td>' . $row["apodate"] . '</td>';
+                echo '<td>' . $row["apotime"] . '</td>';
+                echo '<td>' . $row["apo_msg"] . '</td>';
+                if ($row["apo_status"] == 0){
+                    echo '<td><p class="btn btn-block btn-lg btn-default">Not Approved Yet</pclass></td>';
+                }else if ($row["apo_status"] == 1){
+                    echo '<td><p class="btn btn-block btn-lg btn-success">Approved</pclass></td>';
+                }else{
+                    echo '<td><p class="btn btn-block btn-lg btn-danger">Rejected</pclass></td>';
+                }
+                echo '</tr>';
+                echo '</tbody>';
+            }
+        }
+        //        echo $transactionSql;
+        ?>
+    </table>
+</div>
 <!-- //contact -->
 <?php
 include 'footer.php';
