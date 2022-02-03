@@ -38,6 +38,15 @@ include 'header.php';
     <div class="container">
         <h3 class="agileits-title w3title2" style="text-align:center;">Book Appointment</h3>
     </div>
+    <?php  if (isset($_SESSION['success']) == true) {
+        echo ' <div class="alert alert-primary" style="margin-top:10px">  '.$_SESSION['success'].' </div>';
+        unset($_SESSION['success']);
+    }
+    if (isset($_SESSION['error']) == true) {
+        echo ' <div class="alert alert-danger"  style="margin-top:10px"> ' . $_SESSION['error'] . ' </div>';
+        unset($_SESSION['error']);
+    }
+    ?>
     <!--------------------------------Form-------------------------------->
     <div class="tab-container">
         <form action="appointmentProcess.php" method="post">
@@ -47,8 +56,8 @@ include 'header.php';
             </div>
             <div class="col-sm-6 contact-right">
                 <textarea name="msg" placeholder="Message" required=""></textarea>
-                <button type="submit" class="btn btn-block btn-lg btn-primary">Book Appointment</button>
             </div>
+            <button type="submit" class="btn btn-block btn-lg btn-primary" style="margin-left: 375px;width: 50%;">Book Appointment</button>
             <div class="clearfix"></div>
         </form>
 
