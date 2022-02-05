@@ -45,6 +45,7 @@ $a_name = $_SESSION["a_name"];
                             <a class="nav-link" href="addCategories.php">Add Category</a>
                             <a class="nav-link" href="addProduct.php">Add Product</a>
                             <a class="nav-link" href="adoption.php">Adoption</a>
+                            <a class="nav-link" href="appointment.php">Appointment</a>
                         </nav>
                     </div>
                     <div class="sb-sidenav-menu-heading">Add Ons</div>
