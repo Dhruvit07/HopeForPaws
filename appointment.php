@@ -35,11 +35,8 @@ include 'header.php';
 <!-- //banner -->
 <!-- contact -->
 <div class="contact">
-    <div class="container">
-        <h3 class="agileits-title w3title2" style="text-align:center;">Book Appointment</h3>
-    </div>
-    <?php  if (isset($_SESSION['success']) == true) {
-        echo ' <div class="alert alert-primary" style="margin-top:10px">  '.$_SESSION['success'].' </div>';
+    <?php if (isset($_SESSION['success']) == true) {
+        echo ' <div class="alert alert-primary" style="margin-top:10px">  ' . $_SESSION['success'] . ' </div>';
         unset($_SESSION['success']);
     }
     if (isset($_SESSION['error']) == true) {
@@ -48,19 +45,31 @@ include 'header.php';
     }
     ?>
     <!--------------------------------Form-------------------------------->
-    <div class="tab-container">
-        <form action="appointmentProcess.php" method="post">
-            <div class="col-sm-6 contact-left">
-                <input type="date" name="date" placeholder="Select Date" required="" style="width: 100%; padding: 07px; margin-left: 20px; margin-bottom: 5px">
-                <input type="time" name="time" placeholder="Select Time" required="" style="width: 100%; padding: 07px; margin-left: 20px;">
+    <div style="text-align: center;margin-left: 450px">
+        <div style="text-align: center;">
+            <div class="container">
+                <h3 class="agileits-title w3title2" style="text-align:left;margin-left: 75px">Book Appointment</h3>
             </div>
-            <div class="col-sm-6 contact-right">
-                <textarea name="msg" placeholder="Message" required=""></textarea>
+            <div class="tab-container">
+                <form action="appointmentProcess.php" method="post">
+                    <div class="col-sm-6 contact-left">
+                        <input type="date" name="date" placeholder="Select Date" required=""
+                               style="width: 100%; padding: 07px; margin-left: 20px; margin-bottom: 5px">
+                        <input type="time" name="time" placeholder="Select Time" required=""
+                               style="width: 100%; padding: 07px; margin-left: 20px;">
+                        <textarea name="msg" placeholder="Message" required=""
+                                  style="width: 100%; padding: 07px; margin-left: 20px;margin-top: 5px;" rows="4"
+                                  cols="8"></textarea>
+                        <center>
+                            <button type="submit" class="btn btn-block btn-lg btn-primary"
+                                    style="margin-left: 22px;margin-top: 20px;">Book Appointment
+                            </button>
+                        </center>
+                    </div>
+                    <div class="clearfix"></div>
+                </form>
             </div>
-            <button type="submit" class="btn btn-block btn-lg btn-primary" style="margin-left: 375px;width: 50%;">Book Appointment</button>
-            <div class="clearfix"></div>
-        </form>
-
+        </div>
     </div>
     <!--------------------------------Form-------------------------------->
 </div>
@@ -73,7 +82,8 @@ include 'footer.php';
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                            aria-hidden="true">&times;</span>
                 </button>
             </div>
             <div class="modal-body modal-spa">
@@ -85,7 +95,8 @@ include 'footer.php';
                     felis mattis at. Maecenas sodales tortor ac ligula ultrices dictum et quis urna. Etiam pulvinar
                     metus neque, eget porttitor massa vulputate in.<br> Fusce lacus purus, pulvinar ut lacinia id,
                     sagittis eu mi. Vestibulum eleifend massa sem, eget dapibus turpis efficitur at. Aliquam viverra
-                    quis leo et efficitur. Nullam arcu risus, scelerisque quis interdum eget, fermentum viverra turpis.
+                    quis leo et efficitur. Nullam arcu risus, scelerisque quis interdum eget, fermentum viverra
+                    turpis.
                     Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias
                     consequatur aut At vero eos </p>
             </div>
@@ -98,7 +109,8 @@ include 'footer.php';
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                            aria-hidden="true">&times;</span>
                 </button>
             </div>
             <div class="modal-body login-page "><!-- login-page -->
@@ -113,8 +125,10 @@ include 'footer.php';
                             <div class="tab-1 resp-tab-content" aria-labelledby="tab_item-0">
                                 <div class="agileits-login">
                                     <form action="#" method="post">
-                                        <input type="email" class="email" name="Email" placeholder="Email" required=""/>
-                                        <input type="password" class="password" name="Password" placeholder="Password"
+                                        <input type="email" class="email" name="Email" placeholder="Email"
+                                               required=""/>
+                                        <input type="password" class="password" name="Password"
+                                               placeholder="Password"
                                                required=""/>
                                         <div class="wthree-text">
                                             <ul>

@@ -145,7 +145,6 @@ session_start();
                                     <li><a href="faq.php" data-hover="FAQ">FAQ</a></li>
                                     <li><a href="appointment.php" data-hover="Book Appointment">Book Appointment</a></li>
                                     <li><a href="cart.php" data-hover="Cart">Cart</a></li>
-
                                     <?php
                                 }
                                 ?>
