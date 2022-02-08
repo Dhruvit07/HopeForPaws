@@ -141,20 +141,16 @@ require 'includes/connect.php';
 
 
     ?>
-
-
     <div class="row">
         <div class="col-75">
             <div class="container">
                 <form action="payment.php" method="post">
-
                     <?php
                     if (isset($_GET['error']) && isset($_SESSION['error'])) {
                         echo ' <div class="alert alert-primary" >  ' . $_SESSION['error'] . ' </div>';
                         unset($_SESSION['error']);
                     }
                     ?>
-
                     <div class="row">
                         <div class="col-50">
                             <h3>Billing Address</h3>
@@ -179,10 +175,7 @@ require 'includes/connect.php';
                                 </div>
                             </div>
                         </div>
-
-
                     </div>
-
                     <input type="submit" name="submit" value="Continue to checkout" class="btn">
                 </form>
             </div>

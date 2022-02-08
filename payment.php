@@ -1,7 +1,7 @@
 <?php
 session_start();
 if (!isset($_POST['submit'])) {
-    header('location: e403.php');
+    echo '<script>window.location.href="e403.php"</script>';
 }
 $purpose = "Payment";
 $amount = $_POST["price"];
@@ -33,8 +33,8 @@ if (!empty($_POST["address"]) && !empty($_POST["city"]) && !empty($_POST["addres
         $ch,
         CURLOPT_HTTPHEADER,
         array(
-            "X-Api-Key:test_b3da34ea51a924f0bef6db2cedf",
-            "X-Auth-Token:test_9e75e6828e45244a7637cf101ee"
+            "X-Api-Key:test_030c0023f20a4b9e3af7ad0a8ca",
+            "X-Auth-Token:test_79cd0e2719dbb081c0d12d452ef"
         )
     );
     $payload = array(
