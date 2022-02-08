@@ -25,10 +25,8 @@ if (isset($_SESSION['loggedin'])) {
     $sum = $resut_num / 3;
     $rowa = ceil($sum);
 
-
     $total_pages = ceil($resut_num / $limit_per_page);
     $output = "";
-
 
     $k = 1;
     $j = 1;
@@ -44,13 +42,8 @@ if (isset($_SESSION['loggedin'])) {
         $new_price = $price - (($discount[$i]/100)*$price);
         $img = $row['p_image'];
         $cat = $row['cat_id'];
-        // $quan = $row['p_quantity'];
-        // if ($quan > 0) {
-        //     $quan_txt = "In Stock";
-        // } else {
-        //     $quan_txt = "Out of Stock";
-        // }
 
+        echo $img = parse_url($img,PHP_URL_HOST);
 
         $output .= ' 
         <div class="col-sm-4 col-xs-4 agile_gallery_grid" style="  padding:0px; margin:15px; border: none;  width : 300px;  border-radius: 10px;">
@@ -87,21 +80,7 @@ if (isset($_SESSION['loggedin'])) {
      </div>
      <div style="height: 15px">
      </div>
-     <div class="mt-3">
-             <div class="card voutchers" >
-                 <div class="voutcher-divider">
-                     <div class="voutcher-left text-center"> <span class="voutcher-name">Happy Coupon</span>
-                     <h4 class="voutcher-code">'.$coupon[$k].'</h4>  
-                     </div>
-                     <div class="voutcher-right text-center border-left">
-                      <h4 class="discount-percent">'.$discount[$i].'%</h4> <span class="off">Off</span>
-                     </div>
-                 </div>
-             </div>
-     </div>
-        
-            
-        </form>
+    </form>
         </div>
         ';
 
@@ -139,3 +118,17 @@ if (isset($_SESSION['loggedin'])) {
 } else {
     header('Location: ../e403.php');
 }
+
+
+//<div class="mt-3">
+//             <div class="card voutchers" >
+//                 <div class="voutcher-divider">
+//                     <div class="voutcher-left text-center"> <span class="voutcher-name">Happy Coupon</span>
+//                     <h4 class="voutcher-code">'.$coupon[$k].'</h4>
+//                     </div>
+//                     <div class="voutcher-right text-center border-left">
+//                      <h4 class="discount-percent">'.$discount[$i].'%</h4> <span class="off">Off</span>
+//                     </div>
+//                 </div>
+//             </div>
+//     </div>

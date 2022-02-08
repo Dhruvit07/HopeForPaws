@@ -1,5 +1,4 @@
 <?php
-
 if (!isset($_GET['payment_id']) && !isset($_GET['payment_request_id'])) {
     header('location: e403.php');
 }
@@ -19,8 +18,8 @@ curl_setopt(
     $ch,
     CURLOPT_HTTPHEADER,
     array(
-        "X-Api-Key:test_b3da34ea51a924f0bef6db2cedf",
-        "X-Auth-Token:test_9e75e6828e45244a7637cf101ee"
+        "X-Api-Key:test_030c0023f20a4b9e3af7ad0a8ca",
+        "X-Auth-Token:test_79cd0e2719dbb081c0d12d452ef"
     )
 );
 
@@ -70,7 +69,17 @@ foreach ($_SESSION["cart_item"] as $item) {
 $psql = "INSERT INTO `transfer` ( `u_id`, `order_id`, `payment_id`) VALUES  ('$id', '$o_id', '$payid');";
 $result = mysqli_query($conn, $psql);
 
-unset($_SESSION["cart_item"]);
+if ($result){
+
+    unset($_SESSION["cart_item"]);
+    echo "<script>
+              var timer = setTimeout(function() {
+              window.location='logout.php'
+              }, 1500);
+          </script>";
+}else{
+
+}
 ?>
 
 

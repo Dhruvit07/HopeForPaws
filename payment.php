@@ -1,7 +1,9 @@
 <?php
+    require 'includes/connect.php';
+    require 'includes/paymentApi.php';
 session_start();
 if (!isset($_POST['submit'])) {
-    echo '<script>window.location.href="e403.php"</script>';
+//    echo '<script>window.location.href="e403.php"</script>';
 }
 $purpose = "Payment";
 $amount = $_POST["price"];
@@ -64,7 +66,7 @@ if (!empty($_POST["address"]) && !empty($_POST["city"]) && !empty($_POST["addres
     $error = true;
     $_SESSION['error'] = "All Field Cannot be Empty";
     echo '<script>
-    window.location.href = "pay.php?error=true"
+//    window.location.href = "pay.php?error=true"
     </script>';
 
     exit();
