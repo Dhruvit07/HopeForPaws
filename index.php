@@ -77,7 +77,15 @@ session_start();
                                 <?php
                             } else {
                                 ?>
-                                <li><a href="logout.php" class="play-icon">Logout</a></li>
+                                <div class="dropdown">
+                                    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown"><?php echo $_SESSION['u_name']; ?>
+                                        <span class="caret"></span></button>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="profile.php">Profile</a></li>
+                                        <li><a href="transactionHistory.php">History</a></li>
+                                        <li><a href="logout.php">Logout</a></li>
+                                    </ul>
+                                </div>
                                 <?php
                             }
                             ?>
@@ -115,7 +123,7 @@ session_start();
 
 
                             if (isset($_GET['error']) && isset($_SESSION['error'])) {
-                                echo ' <div class="alert alert-primary"  style="margin-top:10px"> ' . $_SESSION['error'] . ' </div>';
+                                echo ' <div class="alert alert-danger"  style="margin-top:10px"> ' . $_SESSION['error'] . ' </div>';
                                 unset($_SESSION['error']);
                             }
                             ?>
@@ -134,8 +142,9 @@ session_start();
                                     ?>
                                     <li><a href="product.php" data-hover="E-Store">E-Store</a></li>
                                     <li><a href="adoption.php" data-hover="Adoption">Adoption</a></li>
+                                    <li><a href="faq.php" data-hover="FAQ">FAQ</a></li>
+                                    <li><a href="appointment.php" data-hover="Book Appointment">Book Appointment</a></li>
                                     <li><a href="cart.php" data-hover="Cart">Cart</a></li>
-
                                     <?php
                                 }
                                 ?>

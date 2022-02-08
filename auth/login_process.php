@@ -23,11 +23,21 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $u_id = $row['u_id'];
             $u_email = $row['u_email'];
             $u_name = $row['u_name'];
-           
-            $_SESSION['loggedin'] = true;
-            $_SESSION['u_id'] = $u_id;
-            $_SESSION['u_email'] = $u_email;
-            $_SESSION['u_name'] = $u_name;
+            $u_status = $row['u_status'];
+
+
+            if ($u_status != 1) {
+                $_SESSION['loggedin'] = true;
+                $_SESSION['u_id'] = $u_id;
+                $_SESSION['u_email'] = $u_email;
+                $_SESSION['u_name'] = $u_name;
+            }else{
+                $error = true;
+                $_SESSION['error'] = "Contact Administrator";
+                echo '<script>window.location.href="../index.php?error=true"</script>';
+
+                exit();
+            }
         }
 
         echo '<script>window.location.href="../index.php"</script>';

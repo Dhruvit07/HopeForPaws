@@ -52,7 +52,7 @@ if (isset($_SESSION['loggedin'])) {
         // }
 
 
-        $output .= ' 
+        $output = ' 
         <div class="col-sm-4 col-xs-4 agile_gallery_grid" style="  padding:0px; margin:15px; border: none;  width : 300px;  border-radius: 10px;">
          <form method="post" action="cart.php?action=add&id=' . $id . ' ">
          <div class="card"  style="  padding:0px; background-color: #fff; border: none; overflow:hidden;  width : 300px;  border-radius: 10px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)">
@@ -91,10 +91,10 @@ if (isset($_SESSION['loggedin'])) {
              <div class="card voutchers" >
                  <div class="voutcher-divider">
                      <div class="voutcher-left text-center"> <span class="voutcher-name">Happy Coupon</span>
-                         <h4 class="voutcher-code">'.$coupon[$k].'</h4>
+         <!--                <h4 class="voutcher-code">'.$coupon[$k].'</h4>  -->
                      </div>
                      <div class="voutcher-right text-center border-left">
-                         <h4 class="discount-percent">'.$discount[$i].'%</h4> <span class="off">Off</span>
+                 <!--        <h4 class="discount-percent">'.$discount[$i].'%</h4> <span class="off">Off</span> -->
                      </div>
                  </div>
              </div>

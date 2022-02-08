@@ -26,7 +26,7 @@
 </head>
 <body>
 <!-- footer -->
-<div class="footer">
+<div class="footer" style="margin-bottom: 300px;">
     <div class="footer-top">
         <div class="container">
             <div class="footer-grids">

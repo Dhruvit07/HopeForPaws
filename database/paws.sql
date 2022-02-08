@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 24, 2022 at 12:31 AM
+-- Generation Time: Feb 04, 2022 at 12:02 AM
 -- Server version: 10.4.22-MariaDB
--- PHP Version: 8.1.1
+-- PHP Version: 8.0.14
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -60,8 +60,34 @@ CREATE TABLE `adoption` (
 --
 
 INSERT INTO `adoption` (`ad_id`, `pet_id`, `u_id`, `timestamp`, `status`) VALUES
-(1, 1, 1, '2022-01-23 23:03:59', 0),
-(2, 1, 1, '2022-01-23 23:29:09', 0);
+(1, 1, 1, '2022-01-23 23:03:59', 1),
+(2, 1, 1, '2022-01-23 23:29:09', 1),
+(3, 1, 1, '2022-01-25 14:20:45', 2),
+(4, 1, 1, '2022-01-25 14:20:52', 2),
+(5, 1, 2, '2022-01-25 14:20:59', 0);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `appointment`
+--
+
+CREATE TABLE `appointment` (
+  `apo_id` int(5) NOT NULL,
+  `u_id` int(5) NOT NULL,
+  `apodate` varchar(20) NOT NULL,
+  `apotime` varchar(20) NOT NULL,
+  `apo_msg` varchar(200) NOT NULL,
+  `apo_status` int(5) NOT NULL DEFAULT 0 COMMENT '0 - Waiting\r\n1 - Accepted\r\n2 or More - Rejected'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `appointment`
+--
+
+INSERT INTO `appointment` (`apo_id`, `u_id`, `apodate`, `apotime`, `apo_msg`, `apo_status`) VALUES
+(1, 1, '2022-02-04', '09:09', 'Hello Mam This is your appointment with me.', 1),
+(2, 1, '2022-02-04', '17:30', 'I will call you for confirmation of your appointment? For grooming.', 0);
 
 -- --------------------------------------------------------
 
@@ -116,6 +142,7 @@ CREATE TABLE `complaint` (
 
 CREATE TABLE `orders` (
   `order_id` int(5) NOT NULL,
+  `po_id` int(5) NOT NULL,
   `u_id` int(5) NOT NULL,
   `total` int(7) NOT NULL,
   `order_time` datetime NOT NULL DEFAULT current_timestamp(),
@@ -132,8 +159,9 @@ CREATE TABLE `orders` (
 -- Dumping data for table `orders`
 --
 
-INSERT INTO `orders` (`order_id`, `u_id`, `total`, `order_time`, `address`, `email`, `phone`, `state`, `city`, `zip`, `status`) VALUES
-(1, 1, 208, '2022-01-19 19:48:27', 'c / 6/90 gidc colony, abhishek appartment', '1234@gmail.com', 2147483647, 'Gujarat', 'Vadodara', 390010, 1);
+INSERT INTO `orders` (`order_id`, `po_id`, `u_id`, `total`, `order_time`, `address`, `email`, `phone`, `state`, `city`, `zip`, `status`) VALUES
+(1, 0, 1, 208, '2022-01-19 19:48:27', 'c / 6/90 gidc colony, abhishek appartment', '1234@gmail.com', 2147483647, 'Gujarat', 'Vadodara', 390010, 1),
+(2, 0, 1, 106, '2022-02-01 22:37:15', '542 W Street', '1234@gmail.com', 2147483647, 'NY', 'New York', 10001, 1);
 
 -- --------------------------------------------------------
 
@@ -201,7 +229,8 @@ CREATE TABLE `product` (
 --
 
 INSERT INTO `product` (`p_id`, `p_name`, `cat_id`, `p_desc`, `p_price`, `p_image`) VALUES
-(1, 'Dhruvit', 1, 'Hello', 100, 'uploads/ab67616d0000b2730d066c94caca4c00f241ac44.jpg');
+(1, 'Samosa Chat', 1, 'Samosa chaat flavour food', 1220, '../uploads/comfydaysplash.png'),
+(2, 'Bhel Puri', 1, 'Bhel Puri Flavoured', 120, '../uploads/bhel-puri-recipe-1-500x375-removebg-preview.png');
 
 -- --------------------------------------------------------
 
@@ -210,11 +239,18 @@ INSERT INTO `product` (`p_id`, `p_name`, `cat_id`, `p_desc`, `p_price`, `p_image
 --
 
 CREATE TABLE `productorder` (
-  `o_id` int(5) NOT NULL,
+  `po_id` int(5) NOT NULL,
   `u_id` int(5) NOT NULL,
   `product_id` int(11) NOT NULL,
   `p_quantity` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `productorder`
+--
+
+INSERT INTO `productorder` (`po_id`, `u_id`, `product_id`, `p_quantity`) VALUES
+(2, 1, 3, 1);
 
 -- --------------------------------------------------------
 
@@ -256,7 +292,7 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`u_id`, `u_name`, `u_phone`, `u_email`, `u_password`, `u_status`) VALUES
-(1, 'Alok Rathava', 4379897419, '1234@gmail.com', '1234', 0);
+(1, 'Pushti', 7265906640, 'pushti@gmail.com', 'admin@1234', 0);
 
 --
 -- Indexes for dumped tables
@@ -273,6 +309,12 @@ ALTER TABLE `admin`
 --
 ALTER TABLE `adoption`
   ADD PRIMARY KEY (`ad_id`);
+
+--
+-- Indexes for table `appointment`
+--
+ALTER TABLE `appointment`
+  ADD PRIMARY KEY (`apo_id`);
 
 --
 -- Indexes for table `cart`
@@ -326,7 +368,7 @@ ALTER TABLE `product`
 -- Indexes for table `productorder`
 --
 ALTER TABLE `productorder`
-  ADD PRIMARY KEY (`o_id`);
+  ADD PRIMARY KEY (`po_id`);
 
 --
 -- Indexes for table `transfer`
@@ -354,7 +396,13 @@ ALTER TABLE `admin`
 -- AUTO_INCREMENT for table `adoption`
 --
 ALTER TABLE `adoption`
-  MODIFY `ad_id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `ad_id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
+-- AUTO_INCREMENT for table `appointment`
+--
+ALTER TABLE `appointment`
+  MODIFY `apo_id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `cart`
@@ -378,7 +426,7 @@ ALTER TABLE `complaint`
 -- AUTO_INCREMENT for table `orders`
 --
 ALTER TABLE `orders`
-  MODIFY `order_id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `order_id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `payment`
@@ -402,13 +450,13 @@ ALTER TABLE `pet_category`
 -- AUTO_INCREMENT for table `product`
 --
 ALTER TABLE `product`
-  MODIFY `p_id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `p_id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `productorder`
 --
 ALTER TABLE `productorder`
-  MODIFY `o_id` int(5) NOT NULL AUTO_INCREMENT;
+  MODIFY `po_id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `transfer`
