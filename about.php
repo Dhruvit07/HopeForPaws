@@ -58,17 +58,16 @@ include 'header.php';
         <div class="col-md-6 w3ls_welcome_left">
             <div class="w3ls_welcome_right1">
                 <h3 class="agileits-title">About Us</h3>
-                <h6>Lorem ipsum dolor <span> Consectetur </span> sit amet adipisicing elit. </h6>
-                <p>Quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi
-                    consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil
-                    molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur.</p>
-                <div class="w3l_more">
+                <h6>Hope For Paws</h6>
+                <p>Our mission is to save and improve quality of life for as many stray and homeless animals as possible by placing them in foster or adoptive homes, also strives to educate the public about the dire need for spaying and neutering, as our country is currently fighting a vast problem with cat and dog overpopulation. Through our education program , we teach young children about the needs of dogs and cats and the responsibility of pet ownership.
+</p>
+              <!--  <div class="w3l_more">
                     <a href="#" class="button button--nina" data-text="Learn more" data-toggle="modal"
                        data-target="#myModal">
                         <span>L</span><span>e</span><span>a</span><span>n</span>
                         <span>m</span><span>o</span><span>r</span><span>e</span>
                     </a>
-                </div>
+                </div> -->
             </div>
             <div class="clearfix"></div>
         </div>

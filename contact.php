@@ -49,7 +49,7 @@ include 'header.php';
                 </div>
                 <div class="col-xs-10 address-right">
                     <h5>Mail Us</h5>
-                    <p><a href="mailto:">inquiry@hfp.in</a></p>
+                    <p><a href="mailto:pushit@gmail.com">inquiry@hfp.in</a></p>
                 </div>
                 <div class="clearfix"></div>
             </div>

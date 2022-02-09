@@ -43,7 +43,7 @@ if (isset($_SESSION['loggedin'])) {
         $img = $row['p_image'];
         $cat = $row['cat_id'];
 
-        echo $img = parse_url($img,PHP_URL_HOST);
+        // echo $img = parse_url($img,PHP_URL_HOST);
 
         $output .= ' 
         <div class="col-sm-4 col-xs-4 agile_gallery_grid" style="  padding:0px; margin:15px; border: none;  width : 300px;  border-radius: 10px;">

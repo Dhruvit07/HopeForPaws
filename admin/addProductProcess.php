@@ -10,7 +10,7 @@ $productDescription = $_POST['desc'];
 
 /*File Upload*/
 $target_dir = "../uploads/";
-$database_dir = "../uploads/" . basename($_FILES["fileToUpload"]["name"]);
+$database_dir = "uploads/" . basename($_FILES["fileToUpload"]["name"]);
 $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
 
 $uploadOk = 1;

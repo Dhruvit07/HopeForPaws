@@ -44,7 +44,9 @@
                         <li><a href="index.php">Home</a></li>
                         <li><a href="about.php">About</a></li>
                         <li><a href="product.php">E-Store</a></li>
-                        <li><a href="contact.php">Contact</a></li>
+                        <li><a href="adoption.php">Adoption</a></li>
+                        <li><a href="appointment.php">Appointment</a></li>
+<!--                        <li><a href="admin/index.php">Admin</a></li>-->
                     </ul>
                 </div>
                 <div class="col-md-3 col-sm-6 footer-list">
@@ -61,8 +63,8 @@
                 <div class="col-md-3 col-sm-6 footer-grid">
                     <h3>Address</h3>
                     <ul class="w3agile_footer_grid_list">
-                        <li><a href="https://www.google.com/">Hope For Paws</a>
-                        <li>Address</li>
+                        <li><a href="#">Hope For Paws</a>
+                        <li>Address: Blah Blah blah</li>
                     </ul>
                 </div>
                 <div class="clearfix"></div>

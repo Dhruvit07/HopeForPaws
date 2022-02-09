@@ -65,9 +65,11 @@ session_start();
         <div class="header">
             <div class="container">
                 <div class="agile_header_grid">
-                    <div class="header-mdl agileits-logo"><!-- header-two -->
-                        <h1><a href="index.php">Hope For Paws</a></h1>
-                    </div>
+<!--                    <div class="header-mdl agileits-logo">-->
+                        <!-- header-two -->
+<!--                        <h1><a href="index.php">Hope For Paws</a></h1>-->
+                        <h1><a href="index.php"><img src="images/logo/hfp.png" alt="logo" height="150px" width="150px" style="margin-bottom: -100px;"/></a></h1>
+<!--                    </div>-->
                     <div class="agileits_w3layouts_sign_in">
                         <ul>
                             <?php
