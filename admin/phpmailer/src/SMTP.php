@@ -38,7 +38,7 @@ class SMTP
     const VERSION = '6.5.3';
 
     /**
-     * SMTP line break constant.
+     * SMTP line break constant.php.
      *
      * @var string
      */

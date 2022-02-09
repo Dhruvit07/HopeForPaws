@@ -1204,7 +1204,7 @@ class PHPMailer
                     //Decode the name part if it's present and encoded
                     if (
                         property_exists($address, 'personal') &&
-                        //Check for a Mbstring constant rather than using extension_loaded, which is sometimes disabled
+                        //Check for a Mbstring constant.php rather than using extension_loaded, which is sometimes disabled
                         defined('MB_CASE_UPPER') &&
                         preg_match('/^=\?.*\?=$/s', $address->personal)
                     ) {
@@ -1242,7 +1242,7 @@ class PHPMailer
                     $email = trim(str_replace('>', '', $email));
                     $name = trim($name);
                     if (static::validateAddress($email)) {
-                        //Check for a Mbstring constant rather than using extension_loaded, which is sometimes disabled
+                        //Check for a Mbstring constant.php rather than using extension_loaded, which is sometimes disabled
                         //If this name is encoded, decode it
                         if (defined('MB_CASE_UPPER') && preg_match('/^=\?.*\?=$/s', $name)) {
                             $origCharset = mb_internal_encoding();
@@ -2121,7 +2121,7 @@ class PHPMailer
             //Do we need the OpenSSL extension?
             $sslext = defined('OPENSSL_ALGO_SHA256');
             if (static::ENCRYPTION_STARTTLS === $secure || static::ENCRYPTION_SMTPS === $secure) {
-                //Check for an OpenSSL constant rather than using extension_loaded, which is sometimes disabled
+                //Check for an OpenSSL constant.php rather than using extension_loaded, which is sometimes disabled
                 if (!$sslext) {
                     throw new Exception($this->lang('extension_missing') . 'openssl', self::STOP_CRITICAL);
                 }
@@ -4482,7 +4482,7 @@ class PHPMailer
      * @see http://www.php.net/manual/en/function.pathinfo.php#107461
      *
      * @param string     $path    A filename or path, does not need to exist as a file
-     * @param int|string $options Either a PATHINFO_* constant,
+     * @param int|string $options Either a PATHINFO_* constant.php,
      *                            or a string name to return only the specified piece
      *
      * @return string|array

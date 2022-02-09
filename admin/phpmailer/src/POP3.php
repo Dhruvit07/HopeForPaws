@@ -131,7 +131,7 @@ class POP3
     protected $errors = [];
 
     /**
-     * Line break constant.
+     * Line break constant.php.
      */
     const LE = "\r\n";
 

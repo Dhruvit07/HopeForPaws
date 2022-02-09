@@ -2,9 +2,9 @@
 require '../includes/connect.php';
 session_start();
 
-$discount = array(15, 10,20,25);
-$coupon = array("#DHRUVIT","#MONDAI","#FUCKYOU","#FUCKEVERYONE","#FUCKEVERYONE");
-$rating = array(5.0,1.0,2.0,2.5,4.0,4.2,3.3,4.3);
+$discount = array(15, 10, 20, 25);
+$coupon = array("#DHRUVIT", "#MONDAI", "#FUCKYOU", "#FUCKEVERYONE", "#FUCKEVERYONE");
+$rating = array(5.0, 1.0, 2.0, 2.5, 4.0, 4.2, 3.3, 4.3);
 
 $limit_per_page = 9;
 
@@ -32,18 +32,18 @@ if (isset($_SESSION['loggedin'])) {
     $j = 1;
     // $output .= '';
     while ($row = mysqli_fetch_assoc($result)) {
-        $i = rand(0,3);
-        $k = rand(0,4);
-        $j = rand(0,7);
+        $i = rand(0, 3);
+        $k = rand(0, 4);
+        $j = rand(0, 7);
         $id = $row['p_id'];
         $name = $row['p_name'];
         $descc = $row['p_desc'];
         $price = $row['p_price'];
-        $new_price = $price - (($discount[$i]/100)*$price);
+        $new_price = $price - (($discount[$i] / 100) * $price);
         $img = $row['p_image'];
         $cat = $row['cat_id'];
 
-        echo $img = parse_url($img,PHP_URL_HOST);
+        echo $img = parse_url($img, PHP_URL_HOST);
 
         $output .= ' 
         <div class="col-sm-4 col-xs-4 agile_gallery_grid" style="  padding:0px; margin:15px; border: none;  width : 300px;  border-radius: 10px;">
@@ -53,15 +53,15 @@ if (isset($_SESSION['loggedin'])) {
              <div class="image-container">
                  <div class="first">
                      <div class="d-flex justify-content-between align-items-center" style="position: relative; z-index: 3;"> 
-                     <span class="discount">'.$discount[$i].'%</span> <span class="wishlist"><i class="fa fa-heart-o"></i></span> </div>
+                     <span class="discount">' . $discount[$i] . '%</span> <span class="wishlist"><i class="fa fa-heart-o"></i></span> </div>
                  </div>
          
-                 <a href="'. $img . '" class="lsb-preview wthree_p_grid mg-fluid rounded thumbnail-image" data-lsb-group="header" style="border-radius:10px" >
-                     <img src="'. $img . '" alt=" " class="img-responsive" style="border-radius:10px; height: 300px; object-fit: cover;" />
+                 <a href="' . $img . '" class="lsb-preview wthree_p_grid mg-fluid rounded thumbnail-image" data-lsb-group="header" style="border-radius:10px" >
+                     <img src="' . $img . '" alt=" " class="img-responsive" style="border-radius:10px; height: 300px; object-fit: cover;" />
                      <div class="agileinfo_content_wrap">
                          <div class="agileits_content">
-                             <h3>'.$name.'</h3>
-                             <p>'. $descc .'</p>
+                             <h3>' . $name . '</h3>
+                             <p>' . $descc . '</p>
                          </div>
                      </div>
                  </a>
@@ -69,12 +69,12 @@ if (isset($_SESSION['loggedin'])) {
          </div>
          <div class="product-detail-container p-2">
              <div class="d-flex justify-content-between align-items-center">
-                 <h4 class="dress-name">'.$name.'</h4>
-                 <div class="d-flex flex-column mb-2"> <span class="new-price"> ₹ ' . $new_price .'</span> <small class="old-price text-right">₹ '. $price .'</small> </div>
+                 <h4 class="dress-name">' . $name . '</h4>
+                 <div class="d-flex flex-column mb-2"> <span class="new-price"> ₹ ' . $new_price . '</span> <small class="old-price text-right">₹ ' . $price . '</small> </div>
              </div>
             
              <div class="d-flex justify-content-between align-items-center pt-1">
-                 <div> <i class="fa fa-star-o rating-star"></i> <span class="rating-number"> '.$rating[$j].' </span> </div> <span class="buy"><input type="number" style="margin-right:5px" name="quantity" min="1" max="10" value="1" size="2" /><input type="submit" class="buy" value="BUY +" href="cart.php"></span>
+                 <div> <i class="fa fa-star-o rating-star"></i> <span class="rating-number"> ' . $rating[$j] . ' </span> </div> <span class="buy"><input type="number" style="margin-right:5px" name="quantity" min="1" max="10" value="1" size="2" /><input type="submit" class="buy" value="BUY +" href="cart.php"></span>
              </div>
          </div>
      </div>
@@ -90,7 +90,6 @@ if (isset($_SESSION['loggedin'])) {
             $k++;
         }
     }
-    
 
 
     $output .= '
