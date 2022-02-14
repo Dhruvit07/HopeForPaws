@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="bfb82d91-babb-4c7f-b5b6-26eb233e2409" name="Changes" comment="Payment Is Done and Completed perfectly - AGR" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
+  <component name="Git.Settings">
+    <option name="PUSH_AUTO_UPDATE" value="true" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="PhpDebugGeneral" listening_started="true" />
+  <component name="ProjectId" id="24C0qhDKvHDMXwZbnY4Xo6helVY" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/images/logo" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\xampp\htdocs\HopeForPaws\images\logo" />
+      <recent name="D:\xampp\htdocs\HopeForPaws\database" />
+      <recent name="D:\xampp\htdocs\HopeForPaws\admin" />
+      <recent name="D:\xampp\htdocs\HopeForPaws" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="bfb82d91-babb-4c7f-b5b6-26eb233e2409" name="Changes" comment="" />
+      <created>1643119455872</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1643119455872</updated>
+      <workItem from="1643119458021" duration="1539000" />
+      <workItem from="1643730430988" duration="2287000" />
+      <workItem from="1643739090483" duration="1754000" />
+      <workItem from="1643740924538" duration="12348000" />
+      <workItem from="1643911431677" duration="12322000" />
+      <workItem from="1643925410722" duration="38000" />
+      <workItem from="1643925470554" duration="3777000" />
+      <workItem from="1644079038398" duration="9146000" />
+      <workItem from="1644133307911" duration="4071000" />
+      <workItem from="1644340696489" duration="7701000" />
+      <workItem from="1644416518785" duration="1721000" />
+    </task>
+    <task id="LOCAL-00001" summary="Admin Image has been resolved">
+      <created>1643740243184</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1643740243184</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Drop dow menu for user side for profile history and logout completed in header.php but same code not working in the index.php &#10;&#10;&#10;@Dhruvit just have a look if possiblr tru to fix. -- AGR">
+      <created>1643742577117</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1643742577117</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Transaction History Completed">
+      <created>1643750674021</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1643750674021</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Transaction History Completed">
+      <created>1643754612382</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1643754612382</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Video FAQ completed">
+      <created>1643920311947</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1643920311948</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Client - Side Appointment for Gromming for pet">
+      <created>1643924353752</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1643924353752</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Client - Side Appointment for Gromming for pet">
+      <created>1643925682214</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1643925682214</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Mostly client view completed new DB Product page still left">
+      <created>1643929421292</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1643929421292</updated>
+    </task>
+    <task id="LOCAL-00009" summary="403 designed added">
+      <created>1644080039252</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1644080039252</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Appointment Module completed">
+      <created>1644089584967</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1644089584967</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Admin Module">
+      <created>1644341649445</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1644341649445</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Payment Is Done and Completed perfectly - AGR">
+      <created>1644350362165</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1644350362165</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Payment Is Done and Completed perfectly - AGR">
+      <created>1644418245219</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1644418245219</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="Admin Image has been resolved" />
+    <MESSAGE value="Drop dow menu for user side for profile history and logout completed in header.php but same code not working in the index.php &#10;&#10;&#10;@Dhruvit just have a look if possiblr tru to fix. -- AGR" />
+    <MESSAGE value="Transaction History Completed" />
+    <MESSAGE value="Video FAQ completed" />
+    <MESSAGE value="Client - Side Appointment for Gromming for pet" />
+    <MESSAGE value="Mostly client view completed new DB Product page still left" />
+    <MESSAGE value="403 designed added" />
+    <MESSAGE value="Appointment Module completed" />
+    <MESSAGE value="Admin Module" />
+    <MESSAGE value="Payment Is Done and Completed perfectly - AGR" />
+    <option name="LAST_COMMIT_MESSAGE" value="Payment Is Done and Completed perfectly - AGR" />
+  </component>
+</project>
