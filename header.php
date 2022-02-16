@@ -191,7 +191,7 @@ if ($statusVal != 0) {
                                         <li><a href="product.php" data-hover="E-Store">E-Store</a></li>
                                         <li><a href="adoption.php" data-hover="Adoption">Adoption</a></li>
                                         <li><a href="faq.php" data-hover="FAQ">FAQ</a></li>
-                                        <li><a href="appointment.php" data-hover="Book Appointment">Book Appointment</a></li>
+                                        <li><a href="appointment.php" data-hover="Services">Services </a></li>
                                         <?php
                                     }
                                     ?>

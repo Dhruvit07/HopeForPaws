@@ -67,7 +67,7 @@ if (!isset($_SESSION['loggedin'])) {
             width: 75%
         }
 
-        .new-price {
+       /* .new-price {
             font-size: 20px;
             font-weight: bold;
             color: red
@@ -77,7 +77,7 @@ if (!isset($_SESSION['loggedin'])) {
             font-size: 15px;
             font-weight: bold;
             color: grey
-        }
+        }*/
 
         .btn {
             width: 14px;
@@ -122,7 +122,7 @@ if (!isset($_SESSION['loggedin'])) {
         }
 
         .blue:focus {
-            background-color: #40C4FF
+                background-color: #40C4FF
         }
 
         .darkblue {
@@ -164,15 +164,15 @@ if (!isset($_SESSION['loggedin'])) {
             display: flex;
             justify-content: center
         }
-
+/*
         .rating-star {
             font-size: 15px !important
-        }
+        } 
 
         .rating-number {
             font-size: 15px;
             color: grey
-        }
+        }*/
 
         .buy {
             font-size: 18px;

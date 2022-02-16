@@ -48,7 +48,7 @@ include 'header.php';
     <div style="text-align: center;margin-left: 450px">
         <div style="text-align: center;">
             <div class="container">
-                <h3 class="agileits-title w3title2" style="text-align:left;margin-left: 75px">Book Appointment</h3>
+                <h3 class="agileits-title w3title2" style="text-align:left;margin-left: 75px">Gromming Services</h3>
             </div>
             <div class="tab-container">
                 <form action="appointmentProcess.php" method="post">

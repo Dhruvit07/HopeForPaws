@@ -145,7 +145,7 @@ session_start();
                                     <li><a href="product.php" data-hover="E-Store">E-Store</a></li>
                                     <li><a href="adoption.php" data-hover="Adoption">Adoption</a></li>
                                     <li><a href="faq.php" data-hover="FAQ">FAQ</a></li>
-                                    <li><a href="appointment.php" data-hover="Book Appointment">Book Appointment</a></li>
+                                    <li><a href="appointment.php" data-hover="Services">Services</a></li>
                                     <li><a href="cart.php" data-hover="Cart">Cart</a></li>
                                     <?php
                                 }
@@ -167,7 +167,7 @@ session_start();
 
                 <div class="agile_banner_info">
                     <div class="agile_banner_info1">
-                        <h6>What we offer?</h6>
+                        <!--<h6>What we offer?</h6>-->
                         <div id="typed-strings" class="agileits_w3layouts_strings">
                             <p>Welcome to<i> Hope For Paws</i></p>
                             <p><i>Get You</i> Best Help</p>
@@ -194,7 +194,11 @@ session_start();
                 </div>
                 <div class="col-xs-8 wthree_banner_bottom_grid_right">
                     <h4>Free Consultation</h4>
-                    <p>Morbi viverra lacus commodo felis semper, eu iaculis lectus feugiat.</p>
+                    <p>Nutrition Consultation<br>
+
+Dog Parenting Management<br>
+
+ </p>
                 </div>
                 <div class="clearfix"></div>
             </div>
@@ -226,7 +230,8 @@ session_start();
                 </div>
                 <div class="col-xs-8 wthree_banner_bottom_grid_right">
                     <h4>Free Helpline</h4>
-                    <p>Morbi viverra lacus commodo felis semper, eu iaculis lectus feugiat.</p>
+                    <p>Call us :<br> (1800) 989 7419
+</p>
                 </div>
                 <div class="clearfix"></div>
             </div>
@@ -262,17 +267,16 @@ session_start();
         <div class="col-md-6 w3ls_welcome_left">
             <div class="w3ls_welcome_right1">
                 <h3 class="agileits-title">About Us</h3>
-                <h6>Lorem ipsum dolor <span> Consectetur </span> sit amet adipisicing elit. </h6>
-                <p>Quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi
-                    consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil
-                    molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur.</p>
-                <div class="w3l_more">
+                
+                <p>Our mission is to save and improve quality of life for as many stray and homeless animals as possible by placing them in foster or adoptive homes, also strives to educate the public about the dire need for spaying and neutering, as our country is currently fighting a vast problem with cat and dog overpopulation. Through our education program , we teach young children about the needs of dogs and cats and the responsibility of pet ownership.
+</p>
+              <!--  <div class="w3l_more">
                     <a href="#" class="button button--nina" data-text="Learn more" data-toggle="modal"
                        data-target="#myModal">
                         <span>L</span><span>e</span><span>a</span><span>n</span>
                         <span>m</span><span>o</span><span>r</span><span>e</span>
                     </a>
-                </div>
+                </div> -->
             </div>
             <div class="clearfix"></div>
         </div>
@@ -292,16 +296,18 @@ session_start();
         <div class="col-sm-7 w3_agile_blog_bottom_right">
             <h5>Best Pets</h5>
             <h3>24/7 Customer Service Support</h3>
-            <p>Pellentesque accumsan cursus dui, sodales blandit urna sodales vitae.
-                Maecenas placerat eget mi vitae euismod. Duis aliquam efficitur mi,
-                et eleifend velit.</p>
-            <div class="w3l_more">
+            <p>Call us at:<br>
+            (1800) 989 7419
+<br>
+
+We are open All 7 Days, 9am to 9pm.</p>
+           <!-- <div class="w3l_more">
                 <a href="#" class="button button--nina" data-text="Learn more" data-toggle="modal"
                    data-target="#myModal">
                     <span>L</span><span>e</span><span>a</span><span>n</span>
                     <span>m</span><span>o</span><span>r</span><span>e</span>
                 </a>
-            </div>
+            </div> -->
         </div>
         <div class="clearfix"></div>
     </div>

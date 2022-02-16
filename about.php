@@ -58,7 +58,7 @@ include 'header.php';
         <div class="col-md-6 w3ls_welcome_left">
             <div class="w3ls_welcome_right1">
                 <h3 class="agileits-title">About Us</h3>
-                <h6>Hope For Paws</h6>
+               
                 <p>Our mission is to save and improve quality of life for as many stray and homeless animals as possible by placing them in foster or adoptive homes, also strives to educate the public about the dire need for spaying and neutering, as our country is currently fighting a vast problem with cat and dog overpopulation. Through our education program , we teach young children about the needs of dogs and cats and the responsibility of pet ownership.
 </p>
               <!--  <div class="w3l_more">
@@ -85,7 +85,7 @@ include 'header.php';
                 </div>
                 <h5>Happy Clients</h5>
                 <div class='numscroller numscroller-big-bottom' data-slno='1' data-min='0' data-max='157000'
-                     data-delay='.5' data-increment="100">157000
+                     data-delay='.5' data-increment="100">157
                 </div>
             </div>
             <div class="col-sm-3 col-xs-6 stats-grid">
@@ -94,7 +94,7 @@ include 'header.php';
                 </div>
                 <h5>Our Events</h5>
                 <div class='numscroller numscroller-big-bottom' data-slno='1' data-min='0' data-max='850' data-delay='8'
-                     data-increment="1">850
+                     data-increment="1">10
                 </div>
             </div>
             <div class="col-sm-3 col-xs-6 stats-grid">
@@ -103,10 +103,10 @@ include 'header.php';
                 </div>
                 <h5>Projects</h5>
                 <div class='numscroller numscroller-big-bottom' data-slno='1' data-min='0' data-max='80000'
-                     data-delay='.5' data-increment="100">80000
+                     data-delay='.5' data-increment="100">80
                 </div>
             </div>
-            <div class="col-sm-3 col-xs-6 stats-grid">
+            <!--<div class="col-sm-3 col-xs-6 stats-grid">
                 <div class="stats-img w3-agileits">
                     <i class="fa fa-trophy" aria-hidden="true"></i>
                 </div>
@@ -114,13 +114,13 @@ include 'header.php';
                 <div class='numscroller numscroller-big-bottom' data-slno='1' data-min='0' data-max='269' data-delay='8'
                      data-increment="1">269
                 </div>
-            </div>
+            </div>-->
             <div class="clearfix"></div>
         </div>
     </div>
 </div>
 <!-- //Stats -->
-<!-- team -->
+<!-- team --><!--
 <div class="team agileits">
     <div class="team-agileinfo">
         <div class="container">
@@ -214,7 +214,7 @@ include 'header.php';
             </div>
         </div>
     </div>
-</div>
+</div> -->
 <!-- //team -->
 
 <?php
