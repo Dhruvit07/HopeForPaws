@@ -22,6 +22,25 @@ session_start();
     <link rel="stylesheet" href="css/flexslider.css" type="text/css" media="screen" property=""/>
     <!-- //Custom Theme files -->
     <!-- web-fonts -->
+    <!--Title Image-->
+    <link rel="apple-touch-icon" sizes="57x57" href="images/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="images/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="images/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="images/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="images/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="images/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="images/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="images/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="images/favicon/manifest.json">
+    <!--//Title Imagel-->
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="images/favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
     <link href="//fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
     <link href="//fonts.googleapis.com/css?family=Dosis:200,300,400,500,600,700,800" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
@@ -65,11 +84,7 @@ session_start();
         <div class="header">
             <div class="container">
                 <div class="agile_header_grid">
-<!--                    <div class="header-mdl agileits-logo">-->
-                        <!-- header-two -->
-<!--                        <h1><a href="index.php">Hope For Paws</a></h1>-->
                         <h1><a href="index.php"><img src="images/logo/hfp.png" alt="logo" height="150px" width="150px" style="margin-bottom: -100px;"/></a></h1>
-<!--                    </div>-->
                     <div class="agileits_w3layouts_sign_in">
                         <ul>
                             <?php
@@ -80,13 +95,16 @@ session_start();
                             } else {
                                 ?>
                                 <div class="dropdown">
-                                    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown"><?php echo $_SESSION['u_name']; ?>
-                                        <span class="caret"></span></button>
-                                    <ul class="dropdown-menu">
-                                        <li><a href="profile.php">Profile</a></li>
-                                        <li><a href="transactionHistory.php">History</a></li>
-                                        <li><a href="logout.php">Logout</a></li>
-                                    </ul>
+                                    <li>
+                                        <button class="btn btn-primary"
+                                                data-toggle="dropdown"><?php echo $_SESSION['u_name']; ?>
+                                            <span class="caret"></span></button>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="profile.php">Profile</a></li>
+                                            <li><a href="transactionHistory.php">History</a></li>
+                                            <li><a href="logout.php">Logout</a></li>
+                                        </ul>
+                                    </li>
                                 </div>
                                 <?php
                             }
@@ -407,12 +425,17 @@ include 'footer.php';
                     <div class="clearfix"></div>
                 </div>
             </div>
-            --> <!-- //login-page -->
+            <!-- //login-page -->
             <!--    </div>
             </div>
             </div>
-            <!-- //modal sign in -->
+            //modal sign in -->
             <!-- js -->
+            <!-- Popper JS -->
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+
+            <!-- Latest compiled JavaScript -->
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
             <script src="js/jquery-2.2.3.min.js"></script>
             <!-- //js -->
             <!-- jarallax -->

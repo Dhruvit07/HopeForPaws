@@ -1,7 +1,8 @@
 <?php
+/*------------------------------------------Lib Files----------------------------------------------*/
 require '../includes/connect.php';
 session_start();
-
+/*-------------------------------------------------Variables-----------------------------------*/
 $discount = array(15, 10,20,25);
 $coupon = array("#DHRUVIT","#MONDAI","#FUCKYOU","#FUCKEVERYONE","#FUCKEVERYONE");
 $rating = array(5.0,1.0,2.0,2.5,4.0,4.2,3.3,4.3);
@@ -45,6 +46,14 @@ if (isset($_SESSION['loggedin'])) {
 
         // echo $img = parse_url($img,PHP_URL_HOST);
 
+
+        /*
+         *
+         * Write Pagination Comment
+         *
+         *
+         * */
+
         $output .= ' 
         <div class="col-sm-4 col-xs-4 agile_gallery_grid" style="  padding:0px; margin:15px; border: none;  width : 300px;  border-radius: 10px;">
          <form method="post" action="cart.php?action=add&id=' . $id . ' ">
@@ -52,8 +61,7 @@ if (isset($_SESSION['loggedin'])) {
          <div class="w3ls_gallery_grid"  >
              <div class="image-container">
                  <div class="first">
-                     <div class="d-flex justify-content-between align-items-center" style="position: relative; z-index: 3;"> 
-                     <span class="discount">'.$discount[$i].'%</span> <span class="wishlist"><i class="fa fa-heart-o"></i></span> </div>
+                     
                  </div>
          
                  <a href="'. $img . '" class="lsb-preview wthree_p_grid mg-fluid rounded thumbnail-image" data-lsb-group="header" style="border-radius:10px" >

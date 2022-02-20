@@ -26,6 +26,23 @@ if ($statusVal != 0) {
     <html lang="en">
     <head>
         <title>Hope For Paws an Animals and Pets</title>
+        <!--Title Image-->
+        <link rel="apple-touch-icon" sizes="57x57" href="images/favicon/apple-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="images/favicon/apple-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="images/favicon/apple-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="images/favicon/apple-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="images/favicon/apple-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="images/favicon/apple-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="images/favicon/apple-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="images/favicon/apple-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-icon-180x180.png">
+        <link rel="icon" type="image/png" sizes="192x192"  href="images/favicon/android-icon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="images/favicon/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+        <link rel="manifest" href="images/favicon/manifest.json">
+        <!--//Title Imagel-->
+        <meta name="theme-color" content="#ffffff">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
         <meta name="keywords" content="Best Pets Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template,
@@ -144,7 +161,7 @@ if ($statusVal != 0) {
                             <h1><a href="index.php"><img src="images/logo/hfp.png" alt="logo" height="150px" width="150px" style="margin-bottom: -100px;"/></a></h1>
                         <div class="agileits_w3layouts_sign_in">
                             <ul>
-                                <?php
+                                 <?php
                                 if (!isset($_SESSION['loggedin'])) {
                                     ?>
                                     <li><a href="#myModal2" data-toggle="modal" class="play-icon">Login</a></li>
@@ -152,14 +169,16 @@ if ($statusVal != 0) {
                                 } else {
                                     ?>
                                     <div class="dropdown">
-                                        <button class="btn btn-primary dropdown-toggle" type="button"
+                                        <li>
+                                        <button style="background-color: #337ab7; border-radius: 10px;padding-left: 15px;padding-right: 15px;padding-top: 4px;padding-bottom: 4px;font-size: 14px;"
                                                 data-toggle="dropdown"><?php echo $_SESSION['u_name']; ?>
                                             <span class="caret"></span></button>
                                         <ul class="dropdown-menu">
-                                            <li><a href="profile.php">Profile</a></li>
-                                            <li><a href="transactionHistory.php">History</a></li>
-                                            <li><a href="logout.php">Logout</a></li>
+                                            <li><a href="profile.php" >Profile</a></li>
+                                            <li><a href="transactionHistory.php" >History</a></li>
+                                            <li><a href="logout.php" >Logout</a></li>
                                         </ul>
+                                    </li>
                                     </div>
                                     <?php
                                 }
@@ -388,7 +407,11 @@ if ($statusVal != 0) {
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="js/bootstrap.js"></script>
     <script src="js/app.js"></script>
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
 
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
     </body>
     </html>
 <?php } ?>
